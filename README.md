@@ -11,7 +11,7 @@ clone
 git clone https://github.com/ktaroabobon/iccepm2024-site.git
 ```
 
-run 
+run
 
 ```bash
 make run
