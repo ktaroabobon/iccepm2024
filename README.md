@@ -8,23 +8,11 @@ Management (ICCEPM2024).
 clone
 
 ```bash
-git clone https://github.com/ktaroabobon/ifcjs-react.git
+git clone https://github.com/ktaroabobon/iccepm2024-site.git
 ```
 
-setup
+run 
 
 ```bash
-make setup
-```
-
-install dependencies
-
-```bash
-make install
-```
-
-preview
-
-```bash
-make start/serve
+make run
 ```
