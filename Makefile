@@ -5,6 +5,9 @@ help:
 run:
 	yarn start
 
+test:
+	yarn test
+
 fmt:
 ifdef CI
 	yarn run prettier . --check
