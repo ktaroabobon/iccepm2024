@@ -11,3 +11,10 @@ ifdef CI
 else
 	yarn run prettier . --write
 endif
+
+lint:
+	yarn run eslint src
+
+typecheck: TSC_OPTS=
+typecheck:
+	yarn run tsc --noEmit $(TSC_OPTS)
