@@ -2,8 +2,11 @@
 help:
 	cat Makefile
 
-run:
+start:
 	yarn start
+
+run:
+	$(MAKE) start
 
 test:
 	yarn test

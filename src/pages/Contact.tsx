@@ -4,7 +4,7 @@ import { Base } from "./Base";
 export const Contact: React.FC = () => {
   return (
     <Base>
-      <h1>Contact</h1>
+      <h1>Contact Us is Here</h1>
     </Base>
   );
 };
