@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Navbar } from "../components/Navbar";
+import { MyNavbar } from "../components/Navbar";
 
 interface BaseProps {
   children: ReactNode;
@@ -8,7 +8,7 @@ interface BaseProps {
 export const Base = ({ children }: BaseProps) => {
   return (
     <div>
-      <Navbar />
+      <MyNavbar />
 
       <main>{children}</main>
     </div>
