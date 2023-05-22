@@ -118,6 +118,7 @@ const NavMainLink = ({
                     bg: useColorModeValue("gray.200", "gray.700"),
                   }}
                   href={subLinkProps.href}
+                  pointerEvents={"none"}
                 >
                   {subLinkProps.name}
                 </Link>
@@ -138,6 +139,7 @@ const NavMainLink = ({
           bg: useColorModeValue("gray.200", "gray.700"),
         }}
         href={mainLinkProps.href}
+        pointerEvents={"none"}
       >
         {mainLinkProps.name}
       </Link>
@@ -151,7 +153,14 @@ export const MyNavbar: React.FC = () => {
     <>
       <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <Box>Logo</Box>
+          <Link
+            href={"/"}
+            fontWeight={"bold"}
+            fontSize={"lg"}
+            _hover={{ textDecoration: "none" }}
+          >
+            ICCEPM 2024
+          </Link>
           <HStack spacing={8} alignItems={"center"}>
             <HStack
               as={"nav"}
