@@ -9,7 +9,7 @@ import {
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import {CloseIcon, HamburgerIcon} from "@chakra-ui/icons";
+import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 
 interface NavMainLinkProps {
   name: string;
@@ -48,8 +48,8 @@ const NavMainLinks: NavMainLinkProps[] = [
 ];
 
 const NavMainLink = ({
-                       mainLinkProps,
-                     }: {
+  mainLinkProps,
+}: {
   mainLinkProps: NavMainLinkProps;
 }) => {
   return (
@@ -62,7 +62,6 @@ const NavMainLink = ({
         bg: useColorModeValue("blue.200", "blue.700"),
       }}
       href={mainLinkProps.href}
-
     >
       {mainLinkProps.name}
     </Link>
@@ -70,7 +69,7 @@ const NavMainLink = ({
 };
 
 export const MyNavbar: React.FC = () => {
-  const {isOpen, onOpen, onClose} = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
@@ -80,7 +79,7 @@ export const MyNavbar: React.FC = () => {
             href={"/"}
             fontWeight={"bold"}
             fontSize={"lg"}
-            _hover={{textDecoration: "none"}}
+            _hover={{ textDecoration: "none" }}
           >
             ICCEPM 2024
           </Link>
@@ -88,27 +87,27 @@ export const MyNavbar: React.FC = () => {
             <HStack
               as={"nav"}
               spacing={4}
-              display={{base: "none", md: "flex"}}
+              display={{ base: "none", md: "flex" }}
             >
               {NavMainLinks.map((mainLinkProps, index) => (
-                <NavMainLink key={index} mainLinkProps={mainLinkProps}/>
+                <NavMainLink key={index} mainLinkProps={mainLinkProps} />
               ))}
             </HStack>
           </HStack>
           <IconButton
             size={"md"}
-            icon={isOpen ? <CloseIcon/> : <HamburgerIcon/>}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
-            display={{md: "none"}}
+            display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
         </Flex>
 
         {isOpen ? (
-          <Box pb={4} display={{md: "none"}}>
+          <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
               {NavMainLinks.map((mainLinkProps, index) => (
-                <NavMainLink key={index} mainLinkProps={mainLinkProps}/>
+                <NavMainLink key={index} mainLinkProps={mainLinkProps} />
               ))}
             </Stack>
           </Box>

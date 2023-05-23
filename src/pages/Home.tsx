@@ -1,5 +1,5 @@
 import React from "react";
-import {Base} from "./Base";
+import { Base } from "./Base";
 import {
   Grid,
   GridItem,
@@ -50,34 +50,36 @@ export const Home: React.FC = () => {
                 my={"auto"}
               >
                 <VStack>
-                  <Heading as="h1" size="xl" mb={5} textAlign={'center'}>
+                  <Heading as="h1" size="xl" mb={5} textAlign={"center"}>
                     ICCEPM 2024
                   </Heading>
-                  <Text as="h2" size="lg" mb={5} textAlign={'center'}>
+                  <Text as="h2" size="lg" mb={5} textAlign={"center"}>
                     The 10<Text as={"sup"}>th</Text> International Conference on
                     Construction Engineering and Project Management
                   </Text>
-                  <br/>
-                  <HStack textAlign={'center'}>
-                    <CustomIcon icon={"calendar"}/>
-                    <Text fontSize="2xl" mb={3} as={'b'}>
+                  <br />
+                  <HStack textAlign={"center"}>
+                    <CustomIcon icon={"calendar"} />
+                    <Text fontSize="2xl" mb={3} as={"b"}>
                       Jul 29th - Aug 1st 2024
                     </Text>
                   </HStack>
-                  <HStack textAlign={'center'}>
-                    <CustomIcon icon={"location"}/>
+                  <HStack textAlign={"center"}>
+                    <CustomIcon icon={"location"} />
                     <Text fontSize="md" mb={3}>
                       <Link
-                        href={"https://www.global.hokudai.ac.jp/about/facilities/event-and-seminar-spaces/conference-hall/"}
+                        href={
+                          "https://www.global.hokudai.ac.jp/about/facilities/event-and-seminar-spaces/conference-hall/"
+                        }
                         isExternal
-
                       >
-                        Hokkaido University Conference Hall, Sapporo, Hokkaido, Japan
+                        Hokkaido University Conference Hall, Sapporo, Hokkaido,
+                        Japan
                       </Link>
                     </Text>
                   </HStack>
-                  <HStack textAlign={'center'}>
-                    <CustomIcon icon={"organization"}/>
+                  <HStack textAlign={"center"}>
+                    <CustomIcon icon={"organization"} />
                     <Text fontSize="md" mb={3}>
                       Joint consortium
                     </Text>
@@ -99,52 +101,50 @@ export const Home: React.FC = () => {
             </Grid>
           </GridItem>
           <GridItem p={"2"}>
-            <Card
-              rounded={'xl'}
-              shadow={'xl'}
-              bg={"white"}
-            >
+            <Card rounded={"xl"} shadow={"xl"} bg={"white"}>
               <CardHeader>
-                <Heading as={'h2'} fontSize="xl" mb={3} textAlign={'center'}>
+                <Heading as={"h2"} fontSize="xl" mb={3} textAlign={"center"}>
                   Theme: How innovative technology shapes sustainable built
                   environment beyond limits for research and industry
                 </Heading>
               </CardHeader>
 
               <CardBody>
-                <VStack p={'4'} divider={<br/>}>
+                <VStack p={"4"} divider={<br />}>
                   <Text fontSize="md">
-                    We are excited to announce that 10th International Conference on
-                    Construction Engineering and Project Management (ICCEPM) is hosted
-                    in Sapporo from July 29th to August 1st 2024.
+                    We are excited to announce that 10th International
+                    Conference on Construction Engineering and Project
+                    Management (ICCEPM) is hosted in Sapporo from July 29th to
+                    August 1st 2024.
                   </Text>
                   <Text fontSize="md">
-                    We would like to invite you to attend and participate in various
-                    conference activities including academic paper presentations,
-                    business seminars and workshops, networking, music performance,
-                    dinner banquet, and post-conference excursion. These conference
-                    activities will be highly educational, practical and enjoyable for
-                    students, academics and practitioners.
+                    We would like to invite you to attend and participate in
+                    various conference activities including academic paper
+                    presentations, business seminars and workshops, networking,
+                    music performance, dinner banquet, and post-conference
+                    excursion. These conference activities will be highly
+                    educational, practical and enjoyable for students, academics
+                    and practitioners.
                   </Text>
                   <Text fontSize="md">
                     The 2024 ICCEPM theme is “How innovative technology shapes
                     sustainable built environment beyond limits for research and
-                    industry”. Under this theme, the conference will provide inspiring
-                    and thought-provoking opportunities through engagement with
-                    internationally renowned scholars and industry leaders known for
-                    their innovation.
+                    industry”. Under this theme, the conference will provide
+                    inspiring and thought-provoking opportunities through
+                    engagement with internationally renowned scholars and
+                    industry leaders known for their innovation.
                   </Text>
                   <Text fontSize="md">
-                    Unlike traditional academic conferences, this ICCEPM conference is
-                    uniquely designed to blend creative ideas from academia and
-                    innovative practices from industry. Conference participants will
-                    experience the powerful synergy between academia and industry that
-                    will guide the future direction of the construction industry.
+                    Unlike traditional academic conferences, this ICCEPM
+                    conference is uniquely designed to blend creative ideas from
+                    academia and innovative practices from industry. Conference
+                    participants will experience the powerful synergy between
+                    academia and industry that will guide the future direction
+                    of the construction industry.
                   </Text>
                 </VStack>
               </CardBody>
             </Card>
-
           </GridItem>
         </Grid>
       </Base>
