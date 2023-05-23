@@ -1,4 +1,4 @@
-# ICCEPM2024-site
+# ICCEPM2024 web-site porject
 
 This is the repository for the website of the 2024 International Conference on Civil Engineering and Project
 Management (ICCEPM2024).
