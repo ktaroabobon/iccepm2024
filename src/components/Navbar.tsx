@@ -18,28 +18,28 @@ interface NavMainLinkProps {
 
 const NavMainLinks: NavMainLinkProps[] = [
   {
-    name: "About",
-    href: "/about",
-  },
-  {
     name: "Program",
-    href: "/program",
-  },
-  {
-    name: "Proceedings",
-    href: "/proceedings",
-  },
-  {
-    name: "Submission",
-    href: "/submission",
-  },
-  {
-    name: "Registration",
-    href: "/registration",
+    href: "#",
   },
   {
     name: "Venue",
-    href: "/venue",
+    href: "#",
+  },
+  {
+    name: "Proceedings",
+    href: "#",
+  },
+  {
+    name: "Submission",
+    href: "#",
+  },
+  {
+    name: "Registration",
+    href: "#",
+  },
+  {
+    name: "About",
+    href: "/about",
   },
   {
     name: "Contact",
