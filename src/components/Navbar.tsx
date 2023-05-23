@@ -5,23 +5,13 @@ import {
   HStack,
   IconButton,
   Link,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
   Stack,
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import { ChevronDownIcon, CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 
 interface NavMainLinkProps {
-  name: string;
-  href: string;
-  suvLinks?: NavSubLinkProps[];
-}
-
-interface NavSubLinkProps {
   name: string;
   href: string;
 }
@@ -30,38 +20,10 @@ const NavMainLinks: NavMainLinkProps[] = [
   {
     name: "About",
     href: "/about",
-    suvLinks: [
-      {
-        name: "Conference Organizers",
-        href: "/about/conference-organizers",
-      },
-      {
-        name: "Technical Committee",
-        href: "/about/technical-committee",
-      },
-      {
-        name: "Sponsors and Supporters",
-        href: "/about/sponsors",
-      },
-    ],
   },
   {
     name: "Program",
     href: "/program",
-    suvLinks: [
-      {
-        name: "Keynote Speakers",
-        href: "/program/keynote-speakers",
-      },
-      {
-        name: "Detailed Schedule",
-        href: "/program/detailed-schedule",
-      },
-      {
-        name: "Business Seminars and Workshops",
-        href: "/program/business-seminars-and-workshops",
-      },
-    ],
   },
   {
     name: "Proceedings",
@@ -90,65 +52,26 @@ const NavMainLink = ({
 }: {
   mainLinkProps: NavMainLinkProps;
 }) => {
-  if (mainLinkProps.suvLinks && mainLinkProps.suvLinks.length > 0) {
-    return (
-      <Menu>
-        <MenuButton
-          px={2}
-          py={1}
-          rounded={"md"}
-          _hover={{
-            textDecoration: "none",
-            bg: useColorModeValue("gray.200", "gray.700"),
-          }}
-        >
-          {mainLinkProps.name}
-          <ChevronDownIcon />
-        </MenuButton>
-        <MenuList>
-          {mainLinkProps.suvLinks.map(
-            (subLinkProps: NavSubLinkProps, index) => (
-              <MenuItem key={index}>
-                <Link
-                  px={2}
-                  py={1}
-                  rounded={"md"}
-                  _hover={{
-                    textDecoration: "none",
-                    bg: useColorModeValue("gray.200", "gray.700"),
-                  }}
-                  href={subLinkProps.href}
-                  pointerEvents={"none"}
-                >
-                  {subLinkProps.name}
-                </Link>
-              </MenuItem>
-            )
-          )}
-        </MenuList>
-      </Menu>
-    );
-  } else {
-    return (
-      <Link
-        px={2}
-        py={1}
-        rounded={"md"}
-        _hover={{
-          textDecoration: "none",
-          bg: useColorModeValue("gray.200", "gray.700"),
-        }}
-        href={mainLinkProps.href}
-        pointerEvents={"none"}
-      >
-        {mainLinkProps.name}
-      </Link>
-    );
-  }
+  return (
+    <Link
+      px={2}
+      py={1}
+      rounded={"md"}
+      _hover={{
+        textDecoration: "none",
+        bg: useColorModeValue("gray.200", "gray.700"),
+      }}
+      href={mainLinkProps.href}
+      pointerEvents={"none"}
+    >
+      {mainLinkProps.name}
+    </Link>
+  );
 };
 
 export const MyNavbar: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
