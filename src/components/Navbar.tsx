@@ -18,28 +18,28 @@ interface NavMainLinkProps {
 
 const NavMainLinks: NavMainLinkProps[] = [
   {
-    name: "About",
-    href: "/about",
-  },
-  {
     name: "Program",
-    href: "/program",
-  },
-  {
-    name: "Proceedings",
-    href: "/proceedings",
-  },
-  {
-    name: "Submission",
-    href: "/submission",
-  },
-  {
-    name: "Registration",
-    href: "/registration",
+    href: "#",
   },
   {
     name: "Venue",
-    href: "/venue",
+    href: "#",
+  },
+  {
+    name: "Proceedings",
+    href: "#",
+  },
+  {
+    name: "Submission",
+    href: "#",
+  },
+  {
+    name: "Registration",
+    href: "#",
+  },
+  {
+    name: "About",
+    href: "/about",
   },
   {
     name: "Contact",
@@ -56,13 +56,12 @@ const NavMainLink = ({
     <Link
       px={2}
       py={1}
-      rounded={"md"}
+      rounded={"xl"}
       _hover={{
         textDecoration: "none",
-        bg: useColorModeValue("gray.200", "gray.700"),
+        bg: useColorModeValue("blue.200", "blue.700"),
       }}
       href={mainLinkProps.href}
-      pointerEvents={"none"}
     >
       {mainLinkProps.name}
     </Link>
