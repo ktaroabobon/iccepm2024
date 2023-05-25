@@ -2152,6 +2152,11 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.41.0.tgz#080321c3b68253522f7646b55b577dd99d2950b3"
   integrity sha512-LxcyMGxwmTh2lY9FwHPGWOHmYFCZvbrFCBZL4FzSSsxsRPuhrYUg/49/0KDfW8tnIEaEHtfmn6+NPN+1DqaNmA==
 
+"@fontsource/open-sans@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-5.0.1.tgz#01123a667858f631059cafa6aa0b3d043c5fd6e1"
+  integrity sha512-lhgNXJDMmNzd0U02+xNRuBOyELZ0ZBOBLXcrX3ta5ccpUTZoL0XR0c4WkGh4Jow4yi7I1O8Cp6Nddc5p6XM7Eg==
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.8.tgz#03595ac2075a4dc0f191cc2131de14fbd7d410b9"
