@@ -23,19 +23,19 @@ const NavMainLinks: NavMainLinkProps[] = [
   },
   {
     name: "Program",
-    href: "/#",
+    href: "/program",
   },
   {
     name: "Venue",
-    href: "/#",
+    href: "/venue",
   },
   {
     name: "Proceedings",
-    href: "/#",
+    href: "/proceedings",
   },
   {
     name: "Submission",
-    href: "/#",
+    href: "/submission",
   },
   {
     name: "Registration",
