@@ -11,7 +11,7 @@ export const Base = ({ children }: BaseProps) => {
     <div>
       <MyNavbar />
 
-      <Box px={"2"} py={"1"}>
+      <Box px={"10"} py={"5"} mx={"auto"} maxWidth={"1280px"} width={"100%"}>
         <main>{children}</main>
       </Box>
     </div>

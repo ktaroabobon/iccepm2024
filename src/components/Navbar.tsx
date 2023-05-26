@@ -18,28 +18,28 @@ interface NavMainLinkProps {
 
 const NavMainLinks: NavMainLinkProps[] = [
   {
+    name: "About",
+    href: "/about",
+  },
+  {
     name: "Program",
-    href: "#",
+    href: "/#",
   },
   {
     name: "Venue",
-    href: "#",
+    href: "/#",
   },
   {
     name: "Proceedings",
-    href: "#",
+    href: "/#",
   },
   {
     name: "Submission",
-    href: "#",
+    href: "/#",
   },
   {
     name: "Registration",
-    href: "#",
-  },
-  {
-    name: "About",
-    href: "/about",
+    href: "/registration",
   },
   {
     name: "Contact",
@@ -95,7 +95,7 @@ export const MyNavbar: React.FC = () => {
             </HStack>
           </HStack>
           <IconButton
-            size={"md"}
+            size={"lg"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
             display={{ md: "none" }}
