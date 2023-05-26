@@ -8,7 +8,12 @@ interface contentHeaderProps {
 const ContentHeader = ({ props }: { props: contentHeaderProps }) => {
   return (
     <>
-      <Heading as={"h1"} size="2xl" alignSelf={"center"}>
+      <Heading
+        as={"h1"}
+        size="2xl"
+        alignSelf={"center"}
+        textTransform={"uppercase"}
+      >
         {props.title}
       </Heading>
       <Divider />
