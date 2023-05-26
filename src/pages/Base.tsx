@@ -8,12 +8,12 @@ interface BaseProps {
 
 export const Base = ({ children }: BaseProps) => {
   return (
-    <div>
+    <Box bg={"#FCFCFC"} h={"100vh"}>
       <MyNavbar />
 
       <Box px={"10"} py={"5"} mx={"auto"} maxWidth={"1280px"} width={"100%"}>
         <main>{children}</main>
       </Box>
-    </div>
+    </Box>
   );
 };
