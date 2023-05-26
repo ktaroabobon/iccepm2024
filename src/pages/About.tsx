@@ -1,10 +1,11 @@
 import React from "react";
 import { Base } from "./Base";
+import { ComingSoon } from "../components/ComingSoon";
 
 export const About: React.FC = () => {
   return (
     <Base>
-      <h1>About is Here</h1>
+      <ComingSoon />
     </Base>
   );
 };
