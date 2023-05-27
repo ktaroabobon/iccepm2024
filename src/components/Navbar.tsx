@@ -1,13 +1,19 @@
 import React from "react";
 import {
   Box,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
   Flex,
   HStack,
   IconButton,
   Link,
-  Stack,
   useColorModeValue,
   useDisclosure,
+  VStack,
 } from "@chakra-ui/react";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 
@@ -62,6 +68,9 @@ const NavMainLink = ({
         bg: useColorModeValue("blue.200", "blue.700"),
       }}
       href={mainLinkProps.href}
+      size={"xl"}
+      w={"100%"}
+      textAlign={"center"}
     >
       {mainLinkProps.name}
     </Link>
@@ -70,10 +79,11 @@ const NavMainLink = ({
 
 export const MyNavbar: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef(null);
 
   return (
     <>
-      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
+      <Box bg={"#FCFCFC"} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Link
             href={"/"}
@@ -100,18 +110,30 @@ export const MyNavbar: React.FC = () => {
             aria-label={"Open Menu"}
             display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
+            bg={"#FCFCFC"}
           />
-        </Flex>
+          <Drawer
+            isOpen={isOpen}
+            placement="right"
+            onClose={onClose}
+            finalFocusRef={btnRef}
+          >
+            <DrawerOverlay />
+            <DrawerContent>
+              <DrawerHeader>
+                <DrawerCloseButton size={"lg"} />
+              </DrawerHeader>
 
-        {isOpen ? (
-          <Box pb={4} display={{ md: "none" }}>
-            <Stack as={"nav"} spacing={4}>
-              {NavMainLinks.map((mainLinkProps, index) => (
-                <NavMainLink key={index} mainLinkProps={mainLinkProps} />
-              ))}
-            </Stack>
-          </Box>
-        ) : null}
+              <DrawerBody>
+                <VStack>
+                  {NavMainLinks.map((mainLinkProps, index) => (
+                    <NavMainLink key={index} mainLinkProps={mainLinkProps} />
+                  ))}
+                </VStack>
+              </DrawerBody>
+            </DrawerContent>
+          </Drawer>
+        </Flex>
       </Box>
     </>
   );
