@@ -2,6 +2,9 @@
 help:
 	cat Makefile
 
+install:
+	yarn install
+
 start:
 	yarn start
 
