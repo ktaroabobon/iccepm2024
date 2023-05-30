@@ -66,7 +66,7 @@ export const Home: React.FC = () => {
                   </HStack>
                   <HStack textAlign={"center"}>
                     <CustomIcon icon={"location"} />
-                    <Text fontSize="md" mb={3}>
+                    <Text fontSize="md" mb={3} as={"u"}>
                       <Link
                         href={
                           "https://www.global.hokudai.ac.jp/about/facilities/event-and-seminar-spaces/conference-hall/"
