@@ -13,15 +13,7 @@ export const Venue: React.FC = () => {
           <ContentHeader props={{ title: "Venue" }} />
 
           <Stack maxWidth={"768px"} width={"100%"} height={"100%"}>
-            <Box
-              overflow={"auto"}
-              w={"100%"}
-              bgColor={"white"}
-              borderRadius={"lg"}
-              borderColor={"gray.300"}
-              borderWidth={"1px"}
-              p={5}
-            >
+            <Box overflow={"auto"} w={"100%"} p={5}>
               <VStack spacing={2}>
                 <Text fontSize="md" as={"u"}>
                   <Link
