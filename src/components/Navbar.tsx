@@ -97,7 +97,7 @@ export const MyNavbar: React.FC = () => {
             <HStack
               as={"nav"}
               spacing={4}
-              display={{ base: "none", md: "flex" }}
+              display={{ base: "none", lg: "flex" }}
             >
               {NavMainLinks.map((mainLinkProps, index) => (
                 <NavMainLink key={index} mainLinkProps={mainLinkProps} />
@@ -108,7 +108,7 @@ export const MyNavbar: React.FC = () => {
             size={"lg"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
-            display={{ md: "none" }}
+            display={{ lg: "none" }}
             onClick={isOpen ? onClose : onOpen}
             bg={"#FCFCFC"}
           />
