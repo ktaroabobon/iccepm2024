@@ -51,7 +51,7 @@ export const Home: React.FC = () => {
               >
                 <VStack>
                   <Heading as="h1" size="xl" mb={5} textAlign={"center"}>
-                    ICCEPM 2024
+                    ICCEPM 2024.
                   </Heading>
                   <Text as="h2" size="lg" mb={5} textAlign={"center"}>
                     The 10<Text as={"sup"}>th</Text> International Conference on
