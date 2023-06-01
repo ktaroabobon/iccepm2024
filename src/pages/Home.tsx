@@ -11,7 +11,6 @@ import {
   VStack,
   HStack,
   Link,
-  CardHeader,
   Card,
   CardBody,
 } from "@chakra-ui/react";
@@ -48,14 +47,21 @@ export const Home: React.FC = () => {
                 }}
                 p={"2"}
                 my={"auto"}
+                maxWidth={"768px"}
               >
                 <VStack>
                   <Heading as="h1" size="xl" mb={5} textAlign={"center"}>
                     ICCEPM 2024
                   </Heading>
-                  <Text as="h2" size="lg" mb={5} textAlign={"center"}>
-                    The 10<Text as={"sup"}>th</Text> International Conference on
-                    Construction Engineering and Project Management
+                  <Text
+                    as="h2"
+                    size="lg"
+                    mb={5}
+                    textAlign={"center"}
+                    color={"gray.800"}
+                  >
+                    Theme: How innovative technology shapes sustainable built
+                    environment beyond limits for research and industry
                   </Text>
                   <br />
                   <HStack textAlign={"center"}>
@@ -102,13 +108,6 @@ export const Home: React.FC = () => {
           </GridItem>
           <GridItem p={"2"}>
             <Card rounded={"xl"} shadow={"xl"} bg={"white"}>
-              <CardHeader>
-                <Heading as={"h2"} fontSize="xl" mb={3} textAlign={"center"}>
-                  Theme: How innovative technology shapes sustainable built
-                  environment beyond limits for research and industry
-                </Heading>
-              </CardHeader>
-
               <CardBody>
                 <VStack p={"4"} divider={<br />}>
                   <Text fontSize="md">
