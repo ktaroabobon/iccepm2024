@@ -30,12 +30,7 @@ const PROCEEDINGS: ProceedingsProps[] = [
   {
     date: "Day1 - July 29, 2024",
     ampm: "PM",
-    content: {
-      room1: "TBC",
-      room2: "TBC",
-      room3: "TBC",
-      room4: "TBC",
-    },
+    content: { room1: "TBC", room2: "TBC", room3: "TBC", room4: "TBC" },
   },
   {
     date: "Day2 - July 30, 2024",
