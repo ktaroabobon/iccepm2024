@@ -1,6 +1,6 @@
 import { Member, MembersTable } from "./Members";
 import React from "react";
-import { Box, Stack, Text } from "@chakra-ui/react";
+import { Box, Divider, Text } from "@chakra-ui/react";
 
 const ADVISINGCOMMITTEE: Member[] = [
   { name: "Ando Masao", affiliation: "Chiba University" },
@@ -42,78 +42,30 @@ const ADMINISTRATIONCOMMITTEE: Member[] = [
 export const TechnicalCommitteeMembersTable: React.FC = () => {
   return (
     <>
-      <Stack divider={<br />} width={"100%"}>
-        <Box
-          overflow={"auto"}
-          w={"100%"}
-          bgColor={"white"}
-          borderRadius={"lg"}
-          borderColor={"gray.300"}
-          borderWidth={"1px"}
-          p={5}
-        >
-          <Text as={"b"} size="lg" textTransform={"uppercase"}>
-            Advisory Committee
-          </Text>
-          <MembersTable membersList={ADVISINGCOMMITTEE} />
-        </Box>
-        <Box
-          overflow={"auto"}
-          w={"100%"}
-          bgColor={"white"}
-          borderRadius={"lg"}
-          borderColor={"gray.300"}
-          borderWidth={"1px"}
-          p={5}
-        >
-          <Text as={"b"} size="lg" textTransform={"uppercase"}>
-            Key Note Speech Committee
-          </Text>
-          <MembersTable membersList={KEYNOTESPEECHCOMMITTEE} />
-        </Box>
-        <Box
-          overflow={"auto"}
-          w={"100%"}
-          bgColor={"white"}
-          borderRadius={"lg"}
-          borderColor={"gray.300"}
-          borderWidth={"1px"}
-          p={5}
-        >
-          <Text as={"b"} size="lg" textTransform={"uppercase"}>
-            Academic Paper and Best Paper Award Committee
-          </Text>
-          <MembersTable membersList={AWARDSCOMMITTEE} />
-        </Box>
-        <Box
-          overflow={"auto"}
-          w={"100%"}
-          bgColor={"white"}
-          borderRadius={"lg"}
-          borderColor={"gray.300"}
-          borderWidth={"1px"}
-          p={5}
-        >
-          <Text as={"b"} size="lg" textTransform={"uppercase"}>
-            Business Seminar and Workshop Committee
-          </Text>
-          <MembersTable membersList={WORKSOPCOMMITTEE} />
-        </Box>
-        <Box
-          overflow={"auto"}
-          w={"100%"}
-          bgColor={"white"}
-          borderRadius={"lg"}
-          borderColor={"gray.300"}
-          borderWidth={"1px"}
-          p={5}
-        >
-          <Text as={"b"} size="lg" textTransform={"uppercase"}>
-            Secretariat and Administration Committee
-          </Text>
-          <MembersTable membersList={ADMINISTRATIONCOMMITTEE} />
-        </Box>
-      </Stack>
+      <Box my={3}>
+        <Text size={"md"}>Advisory Committee</Text>
+        <MembersTable membersList={ADVISINGCOMMITTEE} />
+      </Box>
+      <Divider />
+      <Box my={3}>
+        <Text size={"md"}>Key Note Speech Committee</Text>
+        <MembersTable membersList={KEYNOTESPEECHCOMMITTEE} />
+      </Box>
+      <Divider />
+      <Box my={3}>
+        <Text size={"md"}>Academic Paper and Best Paper Award Committee</Text>
+        <MembersTable membersList={AWARDSCOMMITTEE} />
+      </Box>
+      <Divider />
+      <Box my={3}>
+        <Text size={"md"}>Business Seminar and Workshop Committee</Text>
+        <MembersTable membersList={WORKSOPCOMMITTEE} />
+      </Box>
+      <Divider />
+      <Box my={3}>
+        <Text size={"md"}>Secretariat and Administration Committee</Text>
+        <MembersTable membersList={ADMINISTRATIONCOMMITTEE} />
+      </Box>
     </>
   );
 };
