@@ -5,7 +5,6 @@ import { Box, Stack, Text } from "@chakra-ui/react";
 const ADVISINGCOMMITTEE: Member[] = [
   { name: "Ando Masao", affiliation: "Chiba University" },
   { name: "Furusaka Shuzo", affiliation: "Ritsumeikan University" },
-  { name: "Kaneta Takashi", affiliation: "Kyoto University" },
 ];
 const KEYNOTESPEECHCOMMITTEE: Member[] = [
   { name: "Nishino Sayaka", affiliation: "Kyoto University" },
