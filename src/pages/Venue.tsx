@@ -3,7 +3,7 @@ import { Base } from "./Base";
 import ContentHeader from "../components/ContentHeader";
 import { Box, Image, Link, Stack, Text, VStack } from "@chakra-ui/react";
 import { GoogleMap } from "../components/GoogleMap";
-import hokkaidoUniversityConferenceHall from "../assets/images/hokkaidoUniversityConferenceHall.png";
+import hokkaidoUniversityConferenceHall from "../assets/images/hokkaidoUniversityConferenceHall.jpg";
 
 export const Venue: React.FC = () => {
   return (
