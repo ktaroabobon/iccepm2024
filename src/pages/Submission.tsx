@@ -58,7 +58,7 @@ const OPTION1EVENTS: Event[] = [
 const OPTION2EVENTS: Event[] = [
   {
     name: "Abstract Submission",
-    date: "February 15, 2023",
+    date: "February 15, 2024",
   },
   {
     name: "Notification of Full Paper Acceptance",
