@@ -14,7 +14,7 @@ import {
   Card,
   CardBody,
 } from "@chakra-ui/react";
-import conferenceHall from "../assets/images/conferenceHall.png";
+import conferenceHall from "../assets/images/conferenceHall.jpg";
 import CustomIcon from "../icons/CustomIcon";
 
 export const Home: React.FC = () => {
@@ -100,6 +100,7 @@ export const Home: React.FC = () => {
                       alt={"conference hole"}
                       rounded={"lg"}
                       width={"100%"}
+                      boxShadow={"2xl"}
                     />
                   </Center>
                 </GridItem>

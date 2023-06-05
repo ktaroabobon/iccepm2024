@@ -4,7 +4,6 @@ import React from "react";
 const CONSORTIUMMEMBERS: Member[] = [
   { name: "Ando Masao", affiliation: "Chiba University" },
   { name: "Furusaka Shuzo", affiliation: "Ritsumeikan University" },
-  { name: "Kaneta Takashi", affiliation: "Kyoto University" },
   { name: "Nishino Sayaka", affiliation: "Kyoto University" },
   { name: "Gondo Tomoyuki", affiliation: "Tokyo University" },
   { name: "Ishida Kousei", affiliation: "Waseda University" },
