@@ -13,6 +13,7 @@ import {
   Link,
   Card,
   CardBody,
+  CardHeader,
 } from "@chakra-ui/react";
 import conferenceHall from "../assets/images/conferenceHall.jpg";
 import CustomIcon from "../icons/CustomIcon";
@@ -60,8 +61,8 @@ export const Home: React.FC = () => {
                     textAlign={"center"}
                     color={"gray.800"}
                   >
-                    Theme: How innovative technology shapes sustainable built
-                    environment beyond limits for research and industry
+                    The 10<Text as={"sup"}>th</Text> International Conference on
+                    Construction Engineering and Project Management
                   </Text>
                   <br />
                   <HStack textAlign={"center"}>
@@ -109,6 +110,13 @@ export const Home: React.FC = () => {
           </GridItem>
           <GridItem p={"2"}>
             <Card rounded={"xl"} shadow={"xl"} bg={"white"}>
+              <CardHeader>
+                <Heading as={"h2"} fontSize="xl" mb={3} textAlign={"center"}>
+                  Theme: How innovative technology shapes sustainable built
+                  environment beyond limits for research and industry
+                </Heading>
+              </CardHeader>
+
               <CardBody>
                 <VStack p={"4"} divider={<br />}>
                   <Text fontSize="md">
