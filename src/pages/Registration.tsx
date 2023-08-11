@@ -199,7 +199,14 @@ export const Registration: React.FC = () => {
               </Box>
             </VStack>
             <VStack display={"flex"} justifyContent={"end"} width={"100%"}>
-              <Button colorScheme="cyan" size="md" mt={5} isDisabled>
+              <Button
+                colorScheme="cyan"
+                size="md"
+                mt={5}
+                as="a"
+                href={"https://easychair.org/conferences/?conf=iccepm2024"}
+                target={"_blank"}
+              >
                 REGISTER NOW
               </Button>
               <Text color={"red.500"}>Deadline: Apr 20 2024</Text>
