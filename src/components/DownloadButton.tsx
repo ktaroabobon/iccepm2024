@@ -7,7 +7,6 @@ type MyDownloadButtonProps = {
 };
 
 const MyDownloadButton: React.FC<MyDownloadButtonProps> = ({ url }) => {
-  // ボタンがクリックされたかどうかを追跡するための状態
   return (
     <Button
       variant="solid"
