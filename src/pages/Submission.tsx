@@ -3,11 +3,9 @@ import { Base } from "./Base";
 import ContentHeader from "../components/ContentHeader";
 import {
   Box,
-  Button,
   Card,
   CardBody,
   CardFooter,
-  CardHeader,
   Divider,
   Heading,
   Link,
@@ -25,7 +23,13 @@ import {
   UnorderedList,
   VStack,
 } from "@chakra-ui/react";
-import CustomIcon from "../icons/CustomIcon";
+import MyDownloadButton from "../components/DownloadButton";
+
+import AbstractTemplateOption1 from "../assets/data/ICCEPM2024_OPTION1_Abstract_Template.docx";
+import FullPaperTemplateOption1 from "../assets/data/ICCEPM2024_OPTION1_Full_Paper_Template.docx";
+import AbstractTemplateOption2 from "../assets/data/ICCEPM2024_OPTION2_Extended_Abstract_Template.docx";
+import PresentationSlideTemplate from "../assets/data/ICCEPM2024_Presentation_Slide_Template.pptx";
+import TransferAgreement from "../assets/data/Transfer_Agreement.docx";
 
 interface Event {
   name: string;
@@ -342,18 +346,11 @@ export const Submission: React.FC = () => {
                 maxWidth={"500px"}
               >
                 <Stack width={"100%"}>
-                  <CardHeader
-                    p={3}
-                    alignItems={"center"}
-                    justifyContent={"center"}
-                  >
-                    <Heading size="md" textTransform={"uppercase"}>
-                      Option1
-                    </Heading>
-                  </CardHeader>
-                  <CardBody my={0} py={0}>
+                  <CardBody my={0} py={3}>
                     <Text py="2" align={"center"} mx={"auto"}>
-                      Full Paper Template
+                      <Heading size="md" textTransform={"uppercase"}>
+                        Abstract Template (Option1)
+                      </Heading>
                     </Text>
                   </CardBody>
 
@@ -362,10 +359,7 @@ export const Submission: React.FC = () => {
                     justifyContent={"center"}
                     pt={0}
                   >
-                    <Button variant="solid" w={"50%"} isDisabled>
-                      <CustomIcon icon={"download"} />
-                      <Text ml={1}>Download</Text>
-                    </Button>
+                    <MyDownloadButton url={AbstractTemplateOption1} />
                   </CardFooter>
                 </Stack>
               </Card>
@@ -377,18 +371,11 @@ export const Submission: React.FC = () => {
                 maxWidth={"500px"}
               >
                 <Stack width={"100%"}>
-                  <CardHeader
-                    p={3}
-                    alignItems={"center"}
-                    justifyContent={"center"}
-                  >
-                    <Heading size="md" textTransform={"uppercase"}>
-                      Option2
-                    </Heading>
-                  </CardHeader>
-                  <CardBody my={0} py={0}>
+                  <CardBody my={0} py={3}>
                     <Text py="2" align={"center"} mx={"auto"}>
-                      Extended Abstract template
+                      <Heading size="md" textTransform={"uppercase"}>
+                        Full Paper Template (Option1)
+                      </Heading>
                     </Text>
                   </CardBody>
 
@@ -397,10 +384,7 @@ export const Submission: React.FC = () => {
                     justifyContent={"center"}
                     pt={0}
                   >
-                    <Button variant="solid" w={"50%"} isDisabled>
-                      <CustomIcon icon={"download"} />
-                      <Text ml={1}>Download</Text>
-                    </Button>
+                    <MyDownloadButton url={FullPaperTemplateOption1} />
                   </CardFooter>
                 </Stack>
               </Card>
@@ -412,25 +396,20 @@ export const Submission: React.FC = () => {
                 maxWidth={"500px"}
               >
                 <Stack width={"100%"}>
-                  <CardHeader
-                    p={3}
-                    alignItems={"center"}
-                    justifyContent={"center"}
-                  >
-                    <Heading size="md" textTransform={"uppercase"}>
-                      Presentation Slide Template
-                    </Heading>
-                  </CardHeader>
+                  <CardBody my={0} py={3}>
+                    <Text py="2" align={"center"} mx={"auto"}>
+                      <Heading size="md" textTransform={"uppercase"}>
+                        Extended Abstract template (Option2)
+                      </Heading>
+                    </Text>
+                  </CardBody>
 
                   <CardFooter
                     alignItems={"center"}
                     justifyContent={"center"}
                     pt={0}
                   >
-                    <Button variant="solid" w={"50%"} isDisabled>
-                      <CustomIcon icon={"download"} />
-                      <Text ml={1}>Download</Text>
-                    </Button>
+                    <MyDownloadButton url={AbstractTemplateOption2} />
                   </CardFooter>
                 </Stack>
               </Card>
@@ -442,25 +421,45 @@ export const Submission: React.FC = () => {
                 maxWidth={"500px"}
               >
                 <Stack width={"100%"}>
-                  <CardHeader
-                    p={3}
-                    alignItems={"center"}
-                    justifyContent={"center"}
-                  >
-                    <Heading size="md" textTransform={"uppercase"}>
-                      Copyright Transfer Agreement
-                    </Heading>
-                  </CardHeader>
+                  <CardBody my={0} py={3}>
+                    <Text py="2" align={"center"} mx={"auto"}>
+                      <Heading size="md" textTransform={"uppercase"}>
+                        Presentation Slide Template
+                      </Heading>
+                    </Text>
+                  </CardBody>
 
                   <CardFooter
                     alignItems={"center"}
                     justifyContent={"center"}
                     pt={0}
                   >
-                    <Button variant="solid" w={"50%"} isDisabled>
-                      <CustomIcon icon={"download"} />
-                      <Text ml={1}>Download</Text>
-                    </Button>
+                    <MyDownloadButton url={PresentationSlideTemplate} />
+                  </CardFooter>
+                </Stack>
+              </Card>
+              <Card
+                direction={{ base: "column", sm: "row" }}
+                overflow="hidden"
+                variant="outline"
+                width={"100%"}
+                maxWidth={"500px"}
+              >
+                <Stack width={"100%"}>
+                  <CardBody my={0} py={3}>
+                    <Text py="2" align={"center"} mx={"auto"}>
+                      <Heading size="md" textTransform={"uppercase"}>
+                        Copyright Transfer Agreement
+                      </Heading>
+                    </Text>
+                  </CardBody>
+
+                  <CardFooter
+                    alignItems={"center"}
+                    justifyContent={"center"}
+                    pt={0}
+                  >
+                    <MyDownloadButton url={TransferAgreement} />
                   </CardFooter>
                 </Stack>
               </Card>
