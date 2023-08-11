@@ -137,7 +137,7 @@ export const About: React.FC = () => {
           <Stack maxWidth={"768px"} width={"100%"} height={"100%"}>
             <VStack divider={<br />}>
               <Box overflow={"auto"} w={"100%"} p={5}>
-                <Stack divider={<br />}>
+                <Stack divider={<br />} py={5}>
                   <Text as={"b"} fontSize="3xl">
                     What is ICCEPM2024?
                   </Text>
@@ -171,6 +171,43 @@ export const About: React.FC = () => {
                     participants will experience the powerful synergy between
                     academia and industry that will guide the future direction
                     of the construction industry.
+                  </Text>
+                </Stack>
+                <Stack divider={<br />} py={5}>
+                  <Text as={"b"} fontSize="3xl">
+                    ICCEPM Consortium
+                  </Text>
+                  <Text fontSize="md">
+                    The International Consortium of Construction Engineering and
+                    Project Management (ICCEPM) has been reformulated in 2021 on
+                    the basis of continued collaborative efforts for ICCEPM
+                    conferences since 2005.
+                  </Text>
+                  <Text fontSize="md">
+                    ICCEPM is a global academic society committed to promoting
+                    advancement in the area of construction engineering and
+                    project management. ICCEPM aims to establish a knowledge
+                    base for the area, accurately forecast future technology
+                    demands, improve industry practices, and facilitate
+                    knowledge transfer in the field of construction management
+                    through international collaboration.
+                  </Text>
+                  <Text fontSize="md">
+                    The co-presidents of ICCEPM, professor Youngsoo Jung of
+                    Myongji University and professor Heng Li of Hong Kong
+                    Polytechnic University, are honored and grateful to have
+                    Japan as our host for 2024!
+                  </Text>
+                  <Text fontSize="md">
+                    Please visit{" "}
+                    <Link
+                      href={"https://www.iccepm.org/"}
+                      color={"cyan.500"}
+                      isExternal
+                    >
+                      our website
+                    </Link>{" "}
+                    for further information about the consortium.
                   </Text>
                 </Stack>
               </Box>

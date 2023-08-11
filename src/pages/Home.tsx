@@ -14,6 +14,7 @@ import {
   Card,
   CardBody,
   CardHeader,
+  Button,
 } from "@chakra-ui/react";
 import conferenceHall from "../assets/images/conferenceHall.jpg";
 import CustomIcon from "../icons/CustomIcon";
@@ -90,6 +91,18 @@ export const Home: React.FC = () => {
                     <Text fontSize="md" mb={3}>
                       Joint consortium
                     </Text>
+                  </HStack>
+                  <HStack textAlign={"center"}>
+                    <Button
+                      as="a"
+                      href={
+                        "https://drive.google.com/file/d/16ymcWUEBUQGQkjIEJ9wWW9TnrpE28EcC/view?usp=sharing"
+                      }
+                      target={"_blank"}
+                      colorScheme={"red"}
+                    >
+                      Page Update
+                    </Button>
                   </HStack>
                 </VStack>
               </GridItem>
