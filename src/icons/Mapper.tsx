@@ -1,7 +1,7 @@
 import { GrLocation } from "react-icons/gr";
-import { MdDateRange } from "react-icons/md";
+import { MdDateRange, MdOutlineOpenInNew } from "react-icons/md";
 import { GoOrganization } from "react-icons/go";
-import { AiFillCalendar, AiOutlineDownload } from "react-icons/ai";
+import { AiFillCalendar, AiFillEye, AiOutlineDownload } from "react-icons/ai";
 
 export const iconMapper = {
   location: GrLocation,
@@ -9,4 +9,6 @@ export const iconMapper = {
   organization: GoOrganization,
   calendar: AiFillCalendar,
   download: AiOutlineDownload,
+  eye: AiFillEye,
+  openNewTab: MdOutlineOpenInNew,
 };

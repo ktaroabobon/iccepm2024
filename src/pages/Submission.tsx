@@ -3,6 +3,7 @@ import { Base } from "./Base";
 import ContentHeader from "../components/ContentHeader";
 import {
   Box,
+  Button,
   Card,
   CardBody,
   CardFooter,
@@ -23,13 +24,7 @@ import {
   UnorderedList,
   VStack,
 } from "@chakra-ui/react";
-import MyDownloadButton from "../components/DownloadButton";
-
-import AbstractTemplateOption1 from "../assets/data/ICCEPM2024_OPTION1_Abstract_Template.docx";
-import FullPaperTemplateOption1 from "../assets/data/ICCEPM2024_OPTION1_Full_Paper_Template.docx";
-import AbstractTemplateOption2 from "../assets/data/ICCEPM2024_OPTION2_Extended_Abstract_Template.docx";
-import PresentationSlideTemplate from "../assets/data/ICCEPM2024_Presentation_Slide_Template.pptx";
-import TransferAgreement from "../assets/data/Transfer_Agreement.docx";
+import CustomIcon from "../icons/CustomIcon";
 
 interface Event {
   name: string;
@@ -359,7 +354,18 @@ export const Submission: React.FC = () => {
                     justifyContent={"center"}
                     pt={0}
                   >
-                    <MyDownloadButton url={AbstractTemplateOption1} />
+                    <Button
+                      variant="solid"
+                      w={"50%"}
+                      as="a"
+                      href={
+                        "https://docs.google.com/document/d/13bgpoouF_3fWPYxu0kF0sOBXuoPqDJrY/edit?usp=sharing&ouid=116157923055759315952&rtpof=true&sd=true"
+                      } // 引数から受け取ったURL
+                      target={"_blank"}
+                    >
+                      <Text mr={1}>Open</Text>
+                      <CustomIcon icon={"openNewTab"} />
+                    </Button>
                   </CardFooter>
                 </Stack>
               </Card>
@@ -384,7 +390,18 @@ export const Submission: React.FC = () => {
                     justifyContent={"center"}
                     pt={0}
                   >
-                    <MyDownloadButton url={FullPaperTemplateOption1} />
+                    <Button
+                      variant="solid"
+                      w={"50%"}
+                      as="a"
+                      href={
+                        "https://docs.google.com/document/d/1Plw1TagJxi10VRmfq7fsFY5IuN73xN1A/edit?usp=sharing&ouid=116157923055759315952&rtpof=true&sd=true"
+                      } // 引数から受け取ったURL
+                      target={"_blank"}
+                    >
+                      <Text mr={1}>Open</Text>
+                      <CustomIcon icon={"openNewTab"} />
+                    </Button>
                   </CardFooter>
                 </Stack>
               </Card>
@@ -409,7 +426,18 @@ export const Submission: React.FC = () => {
                     justifyContent={"center"}
                     pt={0}
                   >
-                    <MyDownloadButton url={AbstractTemplateOption2} />
+                    <Button
+                      variant="solid"
+                      w={"50%"}
+                      as="a"
+                      href={
+                        "https://docs.google.com/document/d/1D5AhliRIxBodZOinFzkOu2kDkdUOpMeo/edit?usp=sharing&ouid=116157923055759315952&rtpof=true&sd=true"
+                      } // 引数から受け取ったURL
+                      target={"_blank"}
+                    >
+                      <Text mr={1}>Open</Text>
+                      <CustomIcon icon={"openNewTab"} />
+                    </Button>
                   </CardFooter>
                 </Stack>
               </Card>
@@ -434,7 +462,18 @@ export const Submission: React.FC = () => {
                     justifyContent={"center"}
                     pt={0}
                   >
-                    <MyDownloadButton url={PresentationSlideTemplate} />
+                    <Button
+                      variant="solid"
+                      w={"50%"}
+                      as="a"
+                      href={
+                        "https://docs.google.com/presentation/d/1bhb6OGIwv3kOdh3Ha8JX-yZfwp4D4_kR/edit?usp=sharing&ouid=116157923055759315952&rtpof=true&sd=true"
+                      } // 引数から受け取ったURL
+                      target={"_blank"}
+                    >
+                      <Text mr={1}>Open</Text>
+                      <CustomIcon icon={"openNewTab"} />
+                    </Button>
                   </CardFooter>
                 </Stack>
               </Card>
@@ -459,7 +498,18 @@ export const Submission: React.FC = () => {
                     justifyContent={"center"}
                     pt={0}
                   >
-                    <MyDownloadButton url={TransferAgreement} />
+                    <Button
+                      variant="solid"
+                      w={"50%"}
+                      as="a"
+                      href={
+                        "https://docs.google.com/document/d/1EF3QD6GhIEkSVUTwdMVc6fPNQ_8TP4ci/edit?usp=sharing&ouid=116157923055759315952&rtpof=true&sd=true"
+                      } // 引数から受け取ったURL
+                      target={"_blank"}
+                    >
+                      <Text mr={1}>Open</Text>
+                      <CustomIcon icon={"openNewTab"} />
+                    </Button>
                   </CardFooter>
                 </Stack>
               </Card>
