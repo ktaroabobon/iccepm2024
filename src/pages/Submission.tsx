@@ -146,6 +146,17 @@ export const Submission: React.FC = () => {
                   Project Management, Sapporo, Hokkaido, Japan, 29-31 July 2024.
                 </ListItem>
               </OrderedList>
+              <Text fontSize="md">
+                Submitted papers will be given the option of publishing their
+                full paper on KICEM &apos s official journal, the Korean Journal
+                of Construction Engineering and Management (KJCEM). The best
+                papers selected from the conference will be given benefits,
+                including partial discount of processing charges and fast
+                tracking of the publication process. The journal is in the
+                process of being indexed on SCOPUS in the near future. Please
+                visit [KICEM site](https://www.kicem.or.kr/eng/) for further
+                information.
+              </Text>
             </VStack>
 
             <br />
