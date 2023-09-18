@@ -13,8 +13,6 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { ConsortiumMembersTable } from "../components/MemberList/ConsortiumMembers";
-import { TechnicalCommitteeMembersTable } from "../components/MemberList/TechnicalCommiteeMembers";
 import { SponsorsTable } from "../components/Sponsors";
 import { SupportingOrganizationsTable } from "../components/SupportingOrganizations";
 
@@ -25,20 +23,7 @@ const ConferenceOrganizers: React.FC = () => {
         <Text as={"b"} fontSize="3xl">
           Conference Organizers
         </Text>
-      </Box>
-      <Box
-        overflow={"auto"}
-        w={"100%"}
-        bgColor={"white"}
-        borderRadius={"lg"}
-        borderColor={"gray.300"}
-        borderWidth={"1px"}
-        p={5}
-      >
-        <Text as={"b"} size="lg" textTransform={"uppercase"}>
-          Consortium Members
-        </Text>
-        <ConsortiumMembersTable />
+        <Text fontSize={"md"}>Conference chairs to be announced soon.</Text>
       </Box>
     </>
   );
@@ -51,43 +36,26 @@ const TechnicalCommittee: React.FC = () => {
         <Text as={"b"} fontSize="3xl">
           Technical Committee
         </Text>
+        <Text fontSize={"md"}>
+          Technical committee chairs to be announced soon.
+        </Text>
       </Box>
-
-      <TechnicalCommitteeMembersTable />
     </>
   );
 };
 
-const Sponsor: React.FC = () => {
+const PaperReviewers: React.FC = () => {
   return (
     <>
       <Stack divider={<br />} width={"100%"}>
         <Box overflow={"auto"} w={"100%"} py={5}>
           <Stack divider={<br />} width={"100%"}>
             <Text as={"b"} fontSize="3xl">
-              Sponsors and Supporting Organizations
+              List of Academic Paper Reviewers
             </Text>
             <Text fontSize="md">
-              The International Conference on Construction Engineering and
-              Project Management (ICCEPM) 20224 is delighted to invite you to
-              support the 10th International Conference on Construction
-              Engineering and Project Management (ICCEPM) to be held in Sapporo,
-              Hokkaido, from July 29th to August 1st, 2024, as a sponsor and
-              supporter.
-            </Text>
-            <Text fontSize="md">
-              Unlike traditional academic conferences, this ICCEPM conference is
-              uniquely designed to blend creative ideas from academia and
-              innovative practices from industry. Conference participants will
-              experience the powerful synergy between academia and industry that
-              will guide the future direction of the construction industry.
-            </Text>
-            <Text fontSize="md">
-              We invite you to support the ICCEPM 2022 conference.
-            </Text>
-            <Text fontSize="md">
-              For details, please contact Secretariat and Administration
-              committee at <Link href={"/contact"}>Contact Page</Link>.
+              Total 80 number of prominent academics and scholars worldwide to
+              be announced soon.
             </Text>
           </Stack>
         </Box>
@@ -216,13 +184,13 @@ export const About: React.FC = () => {
                 <Tabs variant="enclosed" colorScheme="cyan" size={"lg"}>
                   <TabList justifyContent={"center"} alignItems={"center"}>
                     <Tab>
-                      <Text as={"b"}>Organizers</Text>
+                      <Text as={"b"}>Conference Organizers</Text>
                     </Tab>
                     <Tab>
                       <Text as={"b"}>Technical Committee</Text>
                     </Tab>
                     <Tab>
-                      <Text as={"b"}>Sponsors</Text>
+                      <Text as={"b"}>Paper Reviewers</Text>
                     </Tab>
                   </TabList>
                   <TabPanels>
@@ -233,7 +201,7 @@ export const About: React.FC = () => {
                       <TechnicalCommittee />
                     </TabPanel>
                     <TabPanel>
-                      <Sponsor />
+                      <PaperReviewers />
                     </TabPanel>
                   </TabPanels>
                 </Tabs>
