@@ -20,6 +20,7 @@ import {
   AccordionPanel,
   AccordionIcon,
   Stack,
+  Flex,
 } from "@chakra-ui/react";
 import ContentHeader from "../components/ContentHeader";
 import { HotelTable } from "../components/HotelTable";
@@ -41,20 +42,59 @@ export const Registration: React.FC = () => {
                   <Tr>
                     <Th textAlign={"center"}>Category</Th>
                     <Th textAlign={"center"}>Fee(yen)</Th>
+                    <Th textAlign={"center"}>Detail</Th>
                   </Tr>
                 </Thead>
                 <Tbody>
                   <Tr>
                     <Td textAlign={"center"}>Regular</Td>
-                    <Td textAlign={"center"}>40,000</Td>
+                    <Td textAlign={"center"}>
+                      <Text px={2}>80,000</Text>
+                    </Td>
+                    <Td textAlign={"center"}>Payment after April 20, 2024</Td>
+                  </Tr>
+                  <Tr>
+                    <Td textAlign={"center"}>Early Bird</Td>
+                    <Td textAlign={"center"}>
+                      <Text px={2}>60,000</Text>
+                    </Td>
+                    <Td textAlign={"center"}>Payment by April 20, 2024</Td>
                   </Tr>
                   <Tr>
                     <Td textAlign={"center"}>Student</Td>
-                    <Td textAlign={"center"}>30,000</Td>
+                    <Td textAlign={"center"}>
+                      <Text px={2}>50,000</Text>
+                    </Td>
+                    <Td textAlign={"center"}>Payment by April 20, 2024</Td>
                   </Tr>
                 </Tbody>
               </Table>
             </TableContainer>
+            <Box
+              overflow={"auto"}
+              w={"100%"}
+              bgColor={"white"}
+              borderRadius={"lg"}
+              borderWidth={"1px"}
+              p={5}
+              bg={"red.50"}
+            >
+              <Text as={"b"} fontSize="md" textTransform="uppercase">
+                Note
+              </Text>
+              <Text fontSize="sm" my={3}>
+                We have updated the registration fee as above, which now
+                includes the dinner banquet, package lunch and post-conference
+                excursion. Early registration is strongly recommended as some of
+                the activities may be limited to capacity.
+              </Text>
+              <br />
+              <Text fontSize="sm" my={3}>
+                ICCEPM Standard Fee is 600 USD, which is converted to 80,000 Yen
+                (Regular), 60,000 Yen (Early Bird), and 50,000 Yen (Student) for
+                ICCEPM2024.
+              </Text>
+            </Box>
 
             <br />
 
@@ -82,21 +122,46 @@ export const Registration: React.FC = () => {
                     </Text>
                   </ListItem>
                   <ListItem>
-                    Access to all academic paper presentations and business
-                    seminars&workshops included.
+                    <Flex>
+                      Access to all academic paper presentations and business
+                      seminars & workshops
+                      <Text color={"red.500"} pl={1}>
+                        is included
+                      </Text>
+                      .
+                    </Flex>
                   </ListItem>
                   <ListItem>
-                    Dinner banquet on the 3rd day: Extra registration and fee of
-                    (6,000) Yen required.
+                    <Flex>
+                      Dinner banquet on the 3rd day{" "}
+                      <Text color={"red.500"} pl={1}>
+                        is included, subject to capacity
+                      </Text>
+                      .
+                    </Flex>
                   </ListItem>
                   <ListItem>
-                    Post-conference excursion on the 4th day: Extra registration
-                    and fee of (12,000) Yen required.
+                    <Flex>
+                      Post-conference excursion on the 4th day
+                      <Text color={"red.500"} pl={1}>
+                        is included, subject to capacity
+                      </Text>
+                      .
+                    </Flex>
                   </ListItem>
                   <ListItem>
-                    Lunch fee is not included. There are two dining facilities
-                    within Hokkaido University.
+                    <Flex>
+                      Lunch fee
+                      <Text color={"red.500"} pl={1}>
+                        is included
+                      </Text>
+                      .
+                    </Flex>
                     <UnorderedList ml={5} mt={2}>
+                      <ListItem>
+                        There are also two dining facilities within Hokkaido
+                        University.
+                      </ListItem>
                       <ListItem>
                         Memorial center: 30 seats, 5 minutes-walk from
                         Conference Hall
@@ -105,13 +170,17 @@ export const Registration: React.FC = () => {
                         University main dining hall: 500 seats, 10 minutes-walk
                         from Conference Hall
                       </ListItem>
-                      <ListItem>
-                        In addition, package lunch and drink may be provided at
-                        Conference Hall for cash payment.
-                      </ListItem>
                     </UnorderedList>
                   </ListItem>
-                  <ListItem>Hotel fee is not included.</ListItem>
+                  <ListItem>
+                    <Flex>
+                      Hotel fee is
+                      <Text color={"red.500"} px={1} as="u">
+                        not
+                      </Text>
+                      included.
+                    </Flex>
+                  </ListItem>
                 </UnorderedList>
                 <Accordion allowToggle>
                   <AccordionItem>
@@ -210,6 +279,15 @@ export const Registration: React.FC = () => {
                 REGISTER NOW
               </Button>
               <Text color={"red.500"}>Deadline: Apr 20 2024</Text>
+              <Text color={"red.500"}>
+                Please click this &quot;REGISTER NOW&quot; button and access to
+                EasyChair Conference Management System for registration and
+                submitting papers.
+              </Text>
+              <Text color={"red.500"}>
+                Payment instruction and detailed brochure will be
+                announced/uploaded next year on the website.
+              </Text>
             </VStack>
           </Stack>
         </VStack>
