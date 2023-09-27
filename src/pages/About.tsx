@@ -3,6 +3,7 @@ import { Base } from "./Base";
 import ContentHeader from "../components/ContentHeader";
 import {
   Box,
+  Divider,
   Link,
   Stack,
   Tab,
@@ -15,30 +16,76 @@ import {
 } from "@chakra-ui/react";
 import { SponsorsTable } from "../components/Sponsors";
 import { SupportingOrganizationsTable } from "../components/SupportingOrganizations";
+import { MembersGrid } from "../components/MemberList/Members";
+import DrTomonariYashiro from "../assets/images/DrTomonariYashiro.png";
+import DrJungInKim from "../assets/images/DrJungInKim.png";
+import DrTianHan from "../assets/images/DrTianHan.png";
+import DrMasatoyoOgasawara from "../assets/images/DrMasatoyoOgasawara.png";
+import DrSayakaNishino from "../assets/images/DrSayakaNishino.png";
 
 const ConferenceOrganizers: React.FC = () => {
-  return (
-    <>
-      <Box overflow={"auto"} w={"100%"} py={5}>
-        <Text as={"b"} fontSize="3xl">
-          Conference Organizers
-        </Text>
-        <Text fontSize={"md"}>Conference chairs to be announced soon.</Text>
-      </Box>
-    </>
-  );
-};
+  const conferenceChairMembers = [
+    {
+      name: "Dr. Tomonari Yashiro",
+      photo: DrTomonariYashiro,
+      major: "Sustainable Built Environment",
+      affiliation: "The University of Tokyo, Kochi University of Technology",
+    },
+  ];
 
-const TechnicalCommittee: React.FC = () => {
+  const technicalCommitteeCoChairMembers = [
+    {
+      name: "Dr. Jung In Kim",
+      photo: DrJungInKim,
+      major: "Architecture and Civil Engineering",
+      affiliation: "City University of Hong Kong",
+    },
+    {
+      name: "Dr. Tian Han",
+      photo: DrTianHan,
+      major: "Technology Management",
+      affiliation: "Ritsumeikan University",
+    },
+  ];
+
+  const programmeDirectorMembers = [
+    {
+      name: "Dr. Masatoyo Ogasawara",
+      photo: DrMasatoyoOgasawara,
+      major: "Design Information Management",
+      affiliation: "Tokyo Denki University",
+    },
+    {
+      name: "Dr. Sayaka Nishino",
+      photo: DrSayakaNishino,
+      major: "Architecture System and Management",
+      affiliation: "Kyoto University",
+    },
+  ];
+
   return (
     <>
-      <Box overflow={"auto"} w={"100%"} py={5}>
-        <Text as={"b"} fontSize="3xl">
-          Technical Committee
-        </Text>
-        <Text fontSize={"md"}>
-          Technical committee chairs to be announced soon.
-        </Text>
+      <Box w={"100%"} py={5}>
+        <VStack>
+          <Text as={"b"} fontSize="3xl">
+            Conference Organizers
+          </Text>
+          <Divider />
+          <MembersGrid
+            membersList={conferenceChairMembers}
+            title="Conference Chair"
+          />
+          <Divider />
+          <MembersGrid
+            membersList={technicalCommitteeCoChairMembers}
+            title="Technical Committee Co-Chairs"
+          />
+          <Divider />
+          <MembersGrid
+            membersList={programmeDirectorMembers}
+            title="Programme Directors"
+          />
+        </VStack>
       </Box>
     </>
   );
@@ -187,18 +234,12 @@ export const About: React.FC = () => {
                       <Text as={"b"}>Conference Organizers</Text>
                     </Tab>
                     <Tab>
-                      <Text as={"b"}>Technical Committee</Text>
-                    </Tab>
-                    <Tab>
                       <Text as={"b"}>Paper Reviewers</Text>
                     </Tab>
                   </TabList>
                   <TabPanels>
                     <TabPanel>
                       <ConferenceOrganizers />
-                    </TabPanel>
-                    <TabPanel>
-                      <TechnicalCommittee />
                     </TabPanel>
                     <TabPanel>
                       <PaperReviewers />
