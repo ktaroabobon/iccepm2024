@@ -36,8 +36,9 @@ export const Venue: React.FC = () => {
                 <br />
 
                 <Text fontSize="md">
-                  It is 5 minutes-walk from Sapporo Railway Station (which is 40
-                  minutes by train from Airport).
+                  Hokkaido University Conference Hall is 3 minutes-walk from
+                  Sapporo Railway Station North Exit (which is 40 minutes by
+                  train from Airport).
                 </Text>
                 <GoogleMap />
               </VStack>
