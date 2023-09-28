@@ -3,6 +3,7 @@ import { Base } from "./Base";
 import ContentHeader from "../components/ContentHeader";
 import {
   Box,
+  Divider,
   Link,
   Stack,
   Tab,
@@ -13,81 +14,95 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { ConsortiumMembersTable } from "../components/MemberList/ConsortiumMembers";
-import { TechnicalCommitteeMembersTable } from "../components/MemberList/TechnicalCommiteeMembers";
 import { SponsorsTable } from "../components/Sponsors";
 import { SupportingOrganizationsTable } from "../components/SupportingOrganizations";
+import { MembersGrid } from "../components/MemberList/Members";
+import DrTomonariYashiro from "../assets/images/DrTomonariYashiro.png";
+import DrJungInKim from "../assets/images/DrJungInKim.png";
+import DrTianHan from "../assets/images/DrTianHan.png";
+import DrMasatoyoOgasawara from "../assets/images/DrMasatoyoOgasawara.png";
+import DrSayakaNishino from "../assets/images/DrSayakaNishino.png";
 
 const ConferenceOrganizers: React.FC = () => {
+  const conferenceChairMembers = [
+    {
+      name: "Dr. Tomonari Yashiro",
+      photo: DrTomonariYashiro,
+      major: "Sustainable Built Environment",
+      affiliation: "The University of Tokyo, Kochi University of Technology",
+    },
+  ];
+
+  const technicalCommitteeCoChairMembers = [
+    {
+      name: "Dr. Jung In Kim",
+      photo: DrJungInKim,
+      major: "Architecture and Civil Engineering",
+      affiliation: "City University of Hong Kong",
+    },
+    {
+      name: "Dr. Tian Han",
+      photo: DrTianHan,
+      major: "Technology Management",
+      affiliation: "Ritsumeikan University",
+    },
+  ];
+
+  const programmeDirectorMembers = [
+    {
+      name: "Dr. Masatoyo Ogasawara",
+      photo: DrMasatoyoOgasawara,
+      major: "Design Information Management",
+      affiliation: "Tokyo Denki University",
+    },
+    {
+      name: "Dr. Sayaka Nishino",
+      photo: DrSayakaNishino,
+      major: "Architecture System and Management",
+      affiliation: "Kyoto University",
+    },
+  ];
+
   return (
     <>
-      <Box overflow={"auto"} w={"100%"} py={5}>
-        <Text as={"b"} fontSize="3xl">
-          Conference Organizers
-        </Text>
-      </Box>
-      <Box
-        overflow={"auto"}
-        w={"100%"}
-        bgColor={"white"}
-        borderRadius={"lg"}
-        borderColor={"gray.300"}
-        borderWidth={"1px"}
-        p={5}
-      >
-        <Text as={"b"} size="lg" textTransform={"uppercase"}>
-          Consortium Members
-        </Text>
-        <ConsortiumMembersTable />
+      <Box w={"100%"} py={5}>
+        <VStack>
+          <Text as={"b"} fontSize="3xl">
+            Conference Organizers
+          </Text>
+          <Divider />
+          <MembersGrid
+            membersList={conferenceChairMembers}
+            title="Conference Chair"
+          />
+          <Divider />
+          <MembersGrid
+            membersList={technicalCommitteeCoChairMembers}
+            title="Technical Committee Co-Chairs"
+          />
+          <Divider />
+          <MembersGrid
+            membersList={programmeDirectorMembers}
+            title="Programme Directors"
+          />
+        </VStack>
       </Box>
     </>
   );
 };
 
-const TechnicalCommittee: React.FC = () => {
-  return (
-    <>
-      <Box overflow={"auto"} w={"100%"} py={5}>
-        <Text as={"b"} fontSize="3xl">
-          Technical Committee
-        </Text>
-      </Box>
-
-      <TechnicalCommitteeMembersTable />
-    </>
-  );
-};
-
-const Sponsor: React.FC = () => {
+const PaperReviewers: React.FC = () => {
   return (
     <>
       <Stack divider={<br />} width={"100%"}>
         <Box overflow={"auto"} w={"100%"} py={5}>
           <Stack divider={<br />} width={"100%"}>
             <Text as={"b"} fontSize="3xl">
-              Sponsors and Supporting Organizations
+              List of Academic Paper Reviewers
             </Text>
             <Text fontSize="md">
-              The International Conference on Construction Engineering and
-              Project Management (ICCEPM) 20224 is delighted to invite you to
-              support the 10th International Conference on Construction
-              Engineering and Project Management (ICCEPM) to be held in Sapporo,
-              Hokkaido, from July 29th to August 1st, 2024, as a sponsor and
-              supporter.
-            </Text>
-            <Text fontSize="md">
-              Unlike traditional academic conferences, this ICCEPM conference is
-              uniquely designed to blend creative ideas from academia and
-              innovative practices from industry. Conference participants will
-              experience the powerful synergy between academia and industry that
-              will guide the future direction of the construction industry.
-            </Text>
-            <Text fontSize="md">
-              We invite you to support the ICCEPM 2022 conference.
-            </Text>
-            <Text fontSize="md">
-              For details, please contact Secretariat and Administration
-              committee at <Link href={"/contact"}>Contact Page</Link>.
+              Total 80 number of prominent academics and scholars worldwide to
+              be announced soon.
             </Text>
           </Stack>
         </Box>
@@ -216,13 +231,10 @@ export const About: React.FC = () => {
                 <Tabs variant="enclosed" colorScheme="cyan" size={"lg"}>
                   <TabList justifyContent={"center"} alignItems={"center"}>
                     <Tab>
-                      <Text as={"b"}>Organizers</Text>
+                      <Text as={"b"}>Conference Organizers</Text>
                     </Tab>
                     <Tab>
-                      <Text as={"b"}>Technical Committee</Text>
-                    </Tab>
-                    <Tab>
-                      <Text as={"b"}>Sponsors</Text>
+                      <Text as={"b"}>Paper Reviewers</Text>
                     </Tab>
                   </TabList>
                   <TabPanels>
@@ -230,10 +242,7 @@ export const About: React.FC = () => {
                       <ConferenceOrganizers />
                     </TabPanel>
                     <TabPanel>
-                      <TechnicalCommittee />
-                    </TabPanel>
-                    <TabPanel>
-                      <Sponsor />
+                      <PaperReviewers />
                     </TabPanel>
                   </TabPanels>
                 </Tabs>
