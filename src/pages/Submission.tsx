@@ -524,10 +524,6 @@ export const Submission: React.FC = () => {
                   </CardFooter>
                 </Stack>
               </Card>
-              <Text as={"h2"} fontSize={"md"} align={"start"}>
-                It is recommended that you use the template, but it is NOT
-                required.
-              </Text>
             </VStack>
           </Stack>
         </VStack>
