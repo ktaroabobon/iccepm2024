@@ -149,8 +149,15 @@ export const Submission: React.FC = () => {
                 including partial discount of processing charges and fast
                 tracking of the publication process. The journal is in the
                 process of being indexed on SCOPUS in the near future. Please
-                visit [KICEM site](https://www.kicem.or.kr/eng/) for further
-                information.
+                visit{" "}
+                <Link
+                  href={"https://www.kicem.or.kr/eng/"}
+                  color={"cyan.500"}
+                  isExternal
+                >
+                  KICEM site
+                </Link>{" "}
+                for further information.
               </Text>
             </VStack>
 
