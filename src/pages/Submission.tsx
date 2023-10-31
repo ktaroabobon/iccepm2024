@@ -2,11 +2,16 @@ import React from "react";
 import { Base } from "./Base";
 import ContentHeader from "../components/ContentHeader";
 import {
+  Alert,
+  AlertDescription,
+  AlertIcon,
+  AlertTitle,
   Box,
   Button,
   Card,
   CardBody,
   CardFooter,
+  CloseButton,
   Divider,
   Heading,
   Link,
@@ -22,6 +27,7 @@ import {
   Thead,
   Tr,
   UnorderedList,
+  useDisclosure,
   VStack,
 } from "@chakra-ui/react";
 import CustomIcon from "../icons/CustomIcon";
@@ -34,7 +40,7 @@ interface Event {
 const OPTION1EVENTS: Event[] = [
   {
     name: "Abstract Submission",
-    date: "November 1, 2023",
+    date: "November 22, 2023",
   },
   {
     name: "Full Paper Submission",
@@ -73,6 +79,21 @@ const OPTION2EVENTS: Event[] = [
   },
 ];
 
+const Optional1DeadLineAlert = () => {
+  return (
+    <Alert status="error" maxWidth={"768px"} width={"100%"}>
+      <AlertIcon />
+      <Box>
+        <AlertTitle>Abstract Submission Deadline Extended!</AlertTitle>
+        <AlertDescription>
+          The deadline for submitting abstracts has been extended by 3 weeks to
+          November 22, 2023. Please update your calendars accordingly.
+        </AlertDescription>
+      </Box>
+    </Alert>
+  );
+};
+
 export const Submission: React.FC = () => {
   return (
     <Base>
@@ -82,6 +103,7 @@ export const Submission: React.FC = () => {
 
           <Stack maxWidth={"768px"} width={"100%"} height={"100%"}>
             <VStack divider={<br />}>
+              <Optional1DeadLineAlert />
               <Text fontSize="md">
                 To encourage participation from both academics and industry
                 practitioners, the prospective presenters/participants have two
@@ -231,7 +253,13 @@ export const Submission: React.FC = () => {
                         {OPTION1EVENTS.map((event) => (
                           <Tr key={event.name}>
                             <Td textAlign={"center"}>{event.name}</Td>
-                            <Td textAlign={"center"}>{event.date}</Td>
+                            {event.name === "Abstract Submission" ? (
+                              <Td textAlign={"center"}>
+                                <Text color={"red"}>{event.date}</Text>
+                              </Td>
+                            ) : (
+                              <Td textAlign={"center"}>{event.date}</Td>
+                            )}
                           </Tr>
                         ))}
                       </Tbody>
