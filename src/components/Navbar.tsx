@@ -35,10 +35,10 @@ const NavMainLinks: NavMainLinkProps[] = [
     name: "Venue",
     href: "/venue",
   },
-  {
-    name: "Proceedings",
-    href: "/proceedings",
-  },
+  // {
+  //   name: "Proceedings",
+  //   href: "/proceedings",
+  // },
   {
     name: "Submission",
     href: "/submission",
