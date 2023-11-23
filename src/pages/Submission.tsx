@@ -11,7 +11,6 @@ import {
   Card,
   CardBody,
   CardFooter,
-  CloseButton,
   Divider,
   Heading,
   Link,
@@ -27,7 +26,6 @@ import {
   Thead,
   Tr,
   UnorderedList,
-  useDisclosure,
   VStack,
 } from "@chakra-ui/react";
 import CustomIcon from "../icons/CustomIcon";
