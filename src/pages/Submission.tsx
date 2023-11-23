@@ -84,8 +84,8 @@ const Optional1DeadLineAlert = () => {
       <Box>
         <AlertTitle>Abstract Submission Deadline Extended!</AlertTitle>
         <AlertDescription>
-          The deadline for submitting abstracts has been extended by 3 weeks to
-          November 22, 2023. Please update your calendars accordingly.
+          The deadline for submitting abstracts has been extended to December
+          13, 2023. Please update your calendars accordingly.
         </AlertDescription>
       </Box>
     </Alert>
@@ -179,6 +179,34 @@ export const Submission: React.FC = () => {
                 </Link>{" "}
                 for further information.
               </Text>
+
+              <VStack display={"flex"} justifyContent={"center"} width={"100%"}>
+                <Button
+                  colorScheme="cyan"
+                  size="lg"
+                  mt={5}
+                  as="a"
+                  href={"https://easychair.org/conferences/?conf=iccepm2024"}
+                  target={"_blank"}
+                >
+                  SUBMIT YOUR PAPER
+                </Button>
+                <Text fontSize="sm" my={3}>
+                  Click this &quot;SUBMIT YOUR PAPER&quot; button to access the
+                  EasyChair Conference Management System for paper submission.
+                </Text>
+                <Text fontSize="sm" my={3}>
+                  Please refer to the deadlines listed on this page for paper
+                  submission. Note that these deadlines may vary depending on
+                  the type of submission (full paper, extended abstract, etc.)
+                  and review process.
+                </Text>
+                <Text color={"red.500"}>
+                  Remember, all authors/presenters must be registered by April
+                  20, 2024, to ensure their papers are included in the
+                  conference proceedings.
+                </Text>
+              </VStack>
             </VStack>
 
             <br />

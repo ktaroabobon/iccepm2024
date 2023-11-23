@@ -270,19 +270,19 @@ export const Registration: React.FC = () => {
             <VStack display={"flex"} justifyContent={"end"} width={"100%"}>
               <Button
                 colorScheme="cyan"
-                size="md"
+                size="lg"
                 mt={5}
                 as="a"
                 href={"https://easychair.org/conferences/?conf=iccepm2024"}
                 target={"_blank"}
               >
-                REGISTER NOW
+                REGISTER & SUBMIT
               </Button>
               <Text color={"red.500"}>Deadline: Apr 20 2024</Text>
               <Text color={"red.500"}>
-                Please click this &quot;REGISTER NOW&quot; button and access to
-                EasyChair Conference Management System for registration and
-                submitting papers.
+                Please click this &quot;REGISTER & SUBMIT&quot; button and
+                access to EasyChair Conference Management System for
+                registration and submitting papers.
               </Text>
               <Text color={"red.500"}>
                 Payment instruction and detailed brochure will be
