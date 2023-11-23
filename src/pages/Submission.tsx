@@ -40,7 +40,7 @@ interface Event {
 const OPTION1EVENTS: Event[] = [
   {
     name: "Abstract Submission",
-    date: "November 22, 2023",
+    date: "December 13, 2023",
   },
   {
     name: "Full Paper Submission",
