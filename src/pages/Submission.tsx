@@ -431,7 +431,7 @@ export const Submission: React.FC = () => {
                       w={"50%"}
                       as="a"
                       href={
-                        "https://docs.google.com/document/d/13bgpoouF_3fWPYxu0kF0sOBXuoPqDJrY/edit?usp=sharing&ouid=116157923055759315952&rtpof=true&sd=true"
+                        "https://docs.google.com/document/d/1mET_wOj26fIx-UIrvpKpcZPSND3IoPo_/edit?usp=sharing&ouid=116157923055759315952&rtpof=true&sd=true"
                       } // 引数から受け取ったURL
                       target={"_blank"}
                     >
