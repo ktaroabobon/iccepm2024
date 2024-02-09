@@ -42,7 +42,7 @@ const OPTION1EVENTS: Event[] = [
   },
   {
     name: "Full Paper Submission",
-    date: "February 15, 2024",
+    date: "February 29, 2024",
   },
   {
     name: "Notification of Full Paper Acceptance",
@@ -61,7 +61,7 @@ const OPTION1EVENTS: Event[] = [
 const OPTION2EVENTS: Event[] = [
   {
     name: "Abstract Submission",
-    date: "February 15, 2024",
+    date: "February 29, 2024",
   },
   {
     name: "Notification of Full Paper Acceptance",
@@ -79,13 +79,14 @@ const OPTION2EVENTS: Event[] = [
 
 const Optional1DeadLineAlert = () => {
   return (
-    <Alert status="error" maxWidth={"768px"} width={"100%"}>
+    <Alert status="info" maxWidth={"768px"} width={"100%"}>
       <AlertIcon />
       <Box>
-        <AlertTitle>Abstract Submission Deadline Extended!</AlertTitle>
+        <AlertTitle>Submission Deadlines Extended!</AlertTitle>
         <AlertDescription>
-          The deadline for submitting abstracts has been extended to December
-          13, 2023. Please update your calendars accordingly.
+          The submission deadlines for Full Papers (Option1) and Abstracts
+          (Option2) have been extended to February 29, 2024. Please make a note
+          of the new deadline.
         </AlertDescription>
       </Box>
     </Alert>
@@ -279,7 +280,7 @@ export const Submission: React.FC = () => {
                         {OPTION1EVENTS.map((event) => (
                           <Tr key={event.name}>
                             <Td textAlign={"center"}>{event.name}</Td>
-                            {event.name === "Abstract Submission" ? (
+                            {event.name === "Full Paper Submission" ? (
                               <Td textAlign={"center"}>
                                 <Text color={"red"}>{event.date}</Text>
                               </Td>
@@ -358,7 +359,13 @@ export const Submission: React.FC = () => {
                         {OPTION2EVENTS.map((event) => (
                           <Tr key={event.name}>
                             <Td textAlign={"center"}>{event.name}</Td>
-                            <Td textAlign={"center"}>{event.date}</Td>
+                            {event.name === "Abstract Submission" ? (
+                              <Td textAlign={"center"}>
+                                <Text color={"red"}>{event.date}</Text>
+                              </Td>
+                            ) : (
+                              <Td textAlign={"center"}>{event.date}</Td>
+                            )}
                           </Tr>
                         ))}
                       </Tbody>
