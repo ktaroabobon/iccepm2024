@@ -42,7 +42,7 @@ const OPTION1EVENTS: Event[] = [
   },
   {
     name: "Full Paper Submission",
-    date: "February 29, 2024",
+    date: "March 7, 2024",
   },
   {
     name: "Notification of Full Paper Acceptance",
@@ -61,7 +61,7 @@ const OPTION1EVENTS: Event[] = [
 const OPTION2EVENTS: Event[] = [
   {
     name: "Abstract Submission",
-    date: "February 29, 2024",
+    date: "March 7, 2024",
   },
   {
     name: "Notification of Full Paper Acceptance",
@@ -85,8 +85,8 @@ const Optional1DeadLineAlert = () => {
         <AlertTitle>Submission Deadlines Extended!</AlertTitle>
         <AlertDescription>
           The submission deadlines for Full Papers (Option1) and Abstracts
-          (Option2) have been extended to February 29, 2024. Please make a note
-          of the new deadline.
+          (Option2) have been extended to March 7, 2024. Please make a note of
+          the new deadline.
         </AlertDescription>
       </Box>
     </Alert>
