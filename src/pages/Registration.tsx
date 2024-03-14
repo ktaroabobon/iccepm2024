@@ -285,7 +285,7 @@ export const Registration: React.FC = () => {
                 size="lg"
                 mt={5}
                 as="a"
-                href="https://drive.google.com/file/d/1ZmU7Du5ETtzcX3ds5iFRON-fKXHXirLQ/view?usp=sharing" // PDFの閲覧リンクを設定してください
+                href="https://drive.google.com/file/d/1_2mAK9wnDkKbtVGfiSHWC5zGeHXso17U/view?usp=sharing" // PDFの閲覧リンクを設定してください
                 target={"_blank"}
               >
                 Payment
