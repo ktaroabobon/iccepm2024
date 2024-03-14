@@ -474,7 +474,7 @@ export const Submission: React.FC = () => {
                       w={"50%"}
                       as="a"
                       href={
-                        "https://docs.google.com/document/d/1Plw1TagJxi10VRmfq7fsFY5IuN73xN1A/edit?usp=sharing&ouid=116157923055759315952&rtpof=true&sd=true"
+                        "https://docs.google.com/document/d/1zWAjhskd8R1LnraCF19O9fZqGIpNUoXZ/edit?usp=sharing&ouid=116157923055759315952&rtpof=true&sd=true"
                       } // 引数から受け取ったURL
                       target={"_blank"}
                     >
@@ -510,7 +510,7 @@ export const Submission: React.FC = () => {
                       w={"50%"}
                       as="a"
                       href={
-                        "https://docs.google.com/document/d/1D5AhliRIxBodZOinFzkOu2kDkdUOpMeo/edit?usp=sharing&ouid=116157923055759315952&rtpof=true&sd=true"
+                        "https://docs.google.com/document/d/1vq_sDPeZBA4DwulRd3PguFDhb9DeHE39/edit?usp=sharing&ouid=116157923055759315952&rtpof=true&sd=true"
                       } // 引数から受け取ったURL
                       target={"_blank"}
                     >
