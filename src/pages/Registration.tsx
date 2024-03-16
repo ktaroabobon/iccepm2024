@@ -269,25 +269,28 @@ export const Registration: React.FC = () => {
             </VStack>
             <VStack display={"flex"} justifyContent={"end"} width={"100%"}>
               <Button
+                colorScheme="whatsapp"
+                size="lg"
+                mt={3}
+                as="a"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdqQVwxklDeNVpvrVrVh0jTEbkFtLn6iQG-aEogvIcwi28Nug/viewform?vc=0&c=0&w=1&flr=0" // Googleフォームのリンクを設定してください
+                target={"_blank"}
+              >
+                Registration
+              </Button>
+            </VStack>
+            <VStack display={"flex"} justifyContent={"end"} width={"100%"}>
+              <Button
                 colorScheme="cyan"
                 size="lg"
                 mt={5}
                 as="a"
-                href={"https://easychair.org/conferences/?conf=iccepm2024"}
+                href="https://drive.google.com/file/d/1_2mAK9wnDkKbtVGfiSHWC5zGeHXso17U/view?usp=sharing" // PDFの閲覧リンクを設定してください
                 target={"_blank"}
               >
-                REGISTER & SUBMIT
+                Payment
               </Button>
               <Text color={"red.500"}>Deadline: Apr 20 2024</Text>
-              <Text color={"red.500"}>
-                Please click this &quot;REGISTER & SUBMIT&quot; button and
-                access to EasyChair Conference Management System for
-                registration and submitting papers.
-              </Text>
-              <Text color={"red.500"}>
-                Payment instruction and detailed brochure will be
-                announced/uploaded next year on the website.
-              </Text>
             </VStack>
           </Stack>
         </VStack>
