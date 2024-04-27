@@ -17,52 +17,17 @@ import {
 import { SponsorsTable } from "../components/Sponsors";
 import { SupportingOrganizationsTable } from "../components/SupportingOrganizations";
 import { MembersGrid } from "../components/MemberList/Members";
-import DrTomonariYashiro from "../assets/images/DrTomonariYashiro.png";
-import DrJungInKim from "../assets/images/DrJungInKim.png";
-import DrTianHan from "../assets/images/DrTianHan.png";
-import DrMasatoyoOgasawara from "../assets/images/DrMasatoyoOgasawara.png";
-import DrSayakaNishino from "../assets/images/DrSayakaNishino.png";
+import {
+  ConferenceChairMembers,
+  TechnicalCommitteeCoChairMembers,
+  ProgrammeDirectorMembers,
+} from "../data/ConferenceOrganizers";
+import {
+  TechnicalCommitteeMembersTable,
+  OrganizingMembersTable,
+} from "../components/Reviewers";
 
 const ConferenceOrganizers: React.FC = () => {
-  const conferenceChairMembers = [
-    {
-      name: "Dr. Tomonari Yashiro",
-      photo: DrTomonariYashiro,
-      major: "Sustainable Built Environment",
-      affiliation: "The University of Tokyo, Kochi University of Technology",
-    },
-  ];
-
-  const technicalCommitteeCoChairMembers = [
-    {
-      name: "Dr. Jung In Kim",
-      photo: DrJungInKim,
-      major: "Architecture and Civil Engineering",
-      affiliation: "City University of Hong Kong",
-    },
-    {
-      name: "Dr. Tian Han",
-      photo: DrTianHan,
-      major: "Technology Management",
-      affiliation: "Ritsumeikan University",
-    },
-  ];
-
-  const programmeDirectorMembers = [
-    {
-      name: "Dr. Masatoyo Ogasawara",
-      photo: DrMasatoyoOgasawara,
-      major: "Design Information Management",
-      affiliation: "Tokyo Denki University",
-    },
-    {
-      name: "Dr. Sayaka Nishino",
-      photo: DrSayakaNishino,
-      major: "Architecture System and Management",
-      affiliation: "Kyoto University",
-    },
-  ];
-
   return (
     <>
       <Box w={"100%"} py={5}>
@@ -72,17 +37,17 @@ const ConferenceOrganizers: React.FC = () => {
           </Text>
           <Divider />
           <MembersGrid
-            membersList={conferenceChairMembers}
+            membersList={ConferenceChairMembers}
             title="Conference Chair"
           />
           <Divider />
           <MembersGrid
-            membersList={technicalCommitteeCoChairMembers}
+            membersList={TechnicalCommitteeCoChairMembers}
             title="Technical Committee Co-Chairs"
           />
           <Divider />
           <MembersGrid
-            membersList={programmeDirectorMembers}
+            membersList={ProgrammeDirectorMembers}
             title="Programme Directors"
           />
         </VStack>
@@ -100,10 +65,35 @@ const PaperReviewers: React.FC = () => {
             <Text as={"b"} fontSize="3xl">
               List of Academic Paper Reviewers
             </Text>
-            <Text fontSize="md">
-              Total 80 number of prominent academics and scholars worldwide to
-              be announced soon.
+            <Text as={"b"} fontSize="2xl">
+              Technical Committee Members
             </Text>
+            <Box
+              overflow={"auto"}
+              w={"100%"}
+              bgColor={"white"}
+              borderRadius={"lg"}
+              borderColor={"gray.300"}
+              borderWidth={"1px"}
+              p={5}
+            >
+              <TechnicalCommitteeMembersTable />
+            </Box>
+            <br />
+            <Text as={"b"} fontSize="2xl">
+              Conference Organizing Members
+            </Text>
+            <Box
+              overflow={"auto"}
+              w={"100%"}
+              bgColor={"white"}
+              borderRadius={"lg"}
+              borderColor={"gray.300"}
+              borderWidth={"1px"}
+              p={5}
+            >
+              <OrganizingMembersTable />
+            </Box>
           </Stack>
         </Box>
 
