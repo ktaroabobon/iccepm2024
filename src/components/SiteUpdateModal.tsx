@@ -38,7 +38,7 @@ const UpdateInfoByTab: UpdateInfoByTab[] = [
       "\n" +
       "Technical Committee: Technical committee chairs to be announced soon.\n" +
       "\n" +
-      "List of academic paper reviewers - total 80 number of prominent academics and scholars worldwide to be announced soon.\n",
+      "List of academic Committee Members - total 80 number of prominent academics and scholars worldwide to be announced soon.\n",
   },
   {
     tab: "PROGRAM",

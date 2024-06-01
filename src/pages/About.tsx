@@ -56,14 +56,14 @@ const ConferenceOrganizers: React.FC = () => {
   );
 };
 
-const PaperReviewers: React.FC = () => {
+const CommitteeMembers: React.FC = () => {
   return (
     <>
       <Stack divider={<br />} width={"100%"}>
         <Box overflow={"auto"} w={"100%"} py={5}>
           <Stack divider={<br />} width={"100%"}>
             <Text as={"b"} fontSize="3xl">
-              List of Academic Paper Reviewers
+              List of Conference Organizing Committee Members
             </Text>
             <Text as={"b"} fontSize="2xl">
               Technical Committee Members
@@ -224,7 +224,7 @@ export const About: React.FC = () => {
                       <Text as={"b"}>Conference Organizers</Text>
                     </Tab>
                     <Tab>
-                      <Text as={"b"}>Paper Reviewers</Text>
+                      <Text as={"b"}>Committee Members</Text>
                     </Tab>
                   </TabList>
                   <TabPanels>
@@ -232,7 +232,7 @@ export const About: React.FC = () => {
                       <ConferenceOrganizers />
                     </TabPanel>
                     <TabPanel>
-                      <PaperReviewers />
+                      <CommitteeMembers />
                     </TabPanel>
                   </TabPanels>
                 </Tabs>

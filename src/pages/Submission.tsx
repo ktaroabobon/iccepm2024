@@ -54,7 +54,7 @@ const OPTION1EVENTS: Event[] = [
   },
   {
     name: "Camera-ready Submission",
-    date: "May 1, 2024",
+    date: "June 1, 2024",
   },
 ];
 
@@ -73,7 +73,7 @@ const OPTION2EVENTS: Event[] = [
   },
   {
     name: "Camera-ready Submission",
-    date: "May 1, 2024",
+    date: "June 1, 2024",
   },
 ];
 
