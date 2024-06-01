@@ -61,7 +61,7 @@ export const TechnicalCommitteeMembers = [
   { name: "Dr. Jisoo Park", affiliation: "Indiana State University" },
   { name: "Dr. Man-Woo Park", affiliation: "Myongji University" },
   { name: "Dr. Rumiko Sasaki", affiliation: "University of Tokyo" },
-  { name: "Dr. Joonoh Seo", affiliation: "Hong Kong Polytechnic University" },
+  { name: "Dr. JoonOh Seo", affiliation: "Hong Kong Polytechnic University" },
   { name: "Dr. Kazuya Shide", affiliation: "Shibaura Institute of Technology" },
   { name: "Dr. Min Jae Suh", affiliation: "Sam Houston State University" },
   { name: "Dr. Arno Suzuki", affiliation: "Kyoto Tachibana University" },
@@ -111,4 +111,6 @@ export const OrganizingMembers = [
   { name: "Kazunori Katada", affiliation: "Ritsumeikan University" },
   { name: "Nao Shibata", affiliation: "West England University" },
   { name: "Dr. Koji Tanaka", affiliation: "Circle Field Associates Limited" },
+  { name: "Dr. JoonOh Seo", affiliation: "Hong Kong Polytechnic University" },
+  { name: "Bonsang Koo", affiliation: "" },
 ];
