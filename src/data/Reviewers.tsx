@@ -112,5 +112,8 @@ export const OrganizingMembers = [
   { name: "Nao Shibata", affiliation: "West England University" },
   { name: "Dr. Koji Tanaka", affiliation: "Circle Field Associates Limited" },
   { name: "Dr. JoonOh Seo", affiliation: "Hong Kong Polytechnic University" },
-  { name: "Bonsang Koo", affiliation: "" },
+  {
+    name: "Dr. BonSang Koo",
+    affiliation: "Seoul National University of Science and Technology",
+  },
 ];
