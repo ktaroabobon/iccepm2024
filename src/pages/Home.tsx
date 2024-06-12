@@ -101,7 +101,7 @@ export const Home: React.FC = () => {
                       target={"_blank"}
                       colorScheme={"red"}
                     >
-                      Page Update
+                      Conference Brochure
                     </Button>
                   </HStack>
                 </VStack>
