@@ -279,7 +279,7 @@ export const Registration: React.FC = () => {
                 width={"100%"}
                 maxWidth={"300px"}
               >
-                Registration
+                Check In
               </Button>
 
               <Button

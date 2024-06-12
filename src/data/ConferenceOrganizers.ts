@@ -9,7 +9,7 @@ export const ConferenceChairMembers = [
     name: "Dr. Tomonari Yashiro",
     photo: DrTomonariYashiro,
     major: "Sustainable Built Environment",
-    affiliation: "The University of Tokyo, Kochi University of Technology",
+    affiliation: "President of Tokyo City University, University of Tokyo",
   },
 ];
 
