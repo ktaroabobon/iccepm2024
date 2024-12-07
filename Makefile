@@ -1,33 +1,61 @@
-.PHONY: help
-help:
-	cat Makefile
-
-install:
-	yarn install
-
-start:
-	yarn start
-
-run:
-	$(MAKE) start
-
-test:
-	yarn test
-
-fmt:
-ifdef CI
-	yarn run prettier . --check
+DOCKER_COMPOSE_VERSION_CHECKER := $(shell docker compose > /dev/null 2>&1 ; echo $$?)
+ifeq ($(DOCKER_COMPOSE_VERSION_CHECKER), 0)
+DOCKER_COMPOSE_IMPL=docker compose
 else
-	yarn run prettier . --write
+DOCKER_COMPOSE_IMPL=docker-compose
 endif
 
-lint:
-	yarn run eslint src
+.PHONY: up
+up:
+	$(DOCKER_COMPOSE_IMPL) up -d
 
+.PHONY: stop
+stop:
+	$(DOCKER_COMPOSE_IMPL) stop
+
+.PHONY: down/d
+down/d:
+	$(DOCKER_COMPOSE_IMPL) down
+
+.PHONY: down/d/all
+down/d/all:
+	$(DOCKER_COMPOSE_IMPL) down --rmi all --volumes --remove-orphans
+
+.PHONY: rebuild/d
+rebuild/d:
+	$(MAKE) down/d
+	$(MAKE) up
+
+.PHONY: logs
+logs:
+	$(DOCKER_COMPOSE_IMPL) logs -f
+
+.PHONY: login
+login:
+	$(DOCKER_COMPOSE_IMPL) exec app bash
+
+.PHONY: test
+test:
+	$(DOCKER_COMPOSE_IMPL) exec app yarn run test
+
+.PHONY: fmt
+fmt:
+ifdef CI
+	$(DOCKER_COMPOSE_IMPL) exec app yarn run prettier . --check
+else
+	$(DOCKER_COMPOSE_IMPL) exec app yarn run prettier . --write
+endif
+
+.PHONY: lint
+lint:
+	$(DOCKER_COMPOSE_IMPL) exec app yarn run eslint src
+
+.PHONY: typecheck
 typecheck: TSC_OPTS=
 typecheck:
-	yarn run tsc --noEmit $(TSC_OPTS)
+	$(DOCKER_COMPOSE_IMPL) exec app yarn run tsc $(TSC_OPTS)
 
+.PHONY: ci
 ci:
 	@echo "fmt\n------------------"
 	$(MAKE) fmt
@@ -35,3 +63,41 @@ ci:
 	$(MAKE) lint
 	@echo "type check\n------------------"
 	$(MAKE) typecheck
+
+# help command shows all commands in English
+.PHONY: help
+help:
+	@echo "Usage: make [command]"
+	@echo ""
+	@echo "Commands:"
+	@echo "  up              Start the application"
+	@echo "  stop            Stop the application"
+	@echo "  down/d          Stop and remove containers"
+	@echo "  down/d/all      Stop and remove containers, networks, volumes, and images"
+	@echo "  logs            Show logs"
+	@echo "  login           Login to the app container"
+	@echo "  test            Run tests"
+	@echo "  fmt             Format code"
+	@echo "  lint            Lint code"
+	@echo "  typecheck       Type check code"
+	@echo "  ci              Run all CI checks"
+	@echo "  help            Show this help message"
+
+# help/ja command shows all commands in Japanese
+.PHONY: help/ja
+help/ja:
+	@echo "使い方: make [command]"
+	@echo ""
+	@echo "コマンド:"
+	@echo "  up              アプリケーションを起動します"
+	@echo "  stop            アプリケーションを停止します"
+	@echo "  down/d          コンテナを停止して削除します"
+	@echo "  down/d/all      コンテナ、ネットワーク、ボリューム、イメージを停止して削除します"
+	@echo "  logs            ログを表示します"
+	@echo "  login           アプリケーションコンテナにログインします"
+	@echo "  test            テストを実行します"
+	@echo "  fmt             コードをフォーマットします"
+	@echo "  lint            コードをリントします"
+	@echo "  typecheck       コードを型チェックします"
+	@echo "  ci              すべてのCIチェックを実行します"
+	@echo "  help            このヘルプメッセージを表示します"
