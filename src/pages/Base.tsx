@@ -14,7 +14,7 @@ export const Base = ({ children }: BaseProps) => {
         <Alert status="error">
           <AlertIcon />
           <AlertTitle mr={2}>
-          ICCEPM2024 has concluded. Thank you for your participation.
+            ICCEPM2024 has concluded. Thank you for your participation.
           </AlertTitle>
         </Alert>
         <main>{children}</main>

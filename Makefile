@@ -32,7 +32,7 @@ logs:
 
 .PHONY: login
 login:
-	$(DOCKER_COMPOSE_IMPL) exec app bash
+	$(DOCKER_COMPOSE_IMPL) exec app /bin/sh
 
 .PHONY: test
 test:
@@ -41,19 +41,27 @@ test:
 .PHONY: fmt
 fmt:
 ifdef CI
-	$(DOCKER_COMPOSE_IMPL) exec app yarn run prettier . --check
+	yarn run prettier . --check
 else
 	$(DOCKER_COMPOSE_IMPL) exec app yarn run prettier . --write
 endif
 
 .PHONY: lint
 lint:
+ifdef CI
+	yarn run eslint src
+else
 	$(DOCKER_COMPOSE_IMPL) exec app yarn run eslint src
+endif
 
 .PHONY: typecheck
 typecheck: TSC_OPTS=
 typecheck:
+ifdef CI
+	yarn run tsc $(TSC_OPTS)
+else
 	$(DOCKER_COMPOSE_IMPL) exec app yarn run tsc $(TSC_OPTS)
+endif
 
 .PHONY: ci
 ci:
