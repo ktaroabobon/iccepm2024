@@ -72,6 +72,14 @@ ci:
 	@echo "type check\n------------------"
 	$(MAKE) typecheck
 
+.PHONY: build
+build:
+ifdef CI
+	yarn run build
+else
+	$(DOCKER_COMPOSE_IMPL) exec app yarn run build
+endif
+
 # help command shows all commands in English
 .PHONY: help
 help:
@@ -89,6 +97,7 @@ help:
 	@echo "  lint            Lint code"
 	@echo "  typecheck       Type check code"
 	@echo "  ci              Run all CI checks"
+	@echo "  build           Build the application"
 	@echo "  help            Show this help message"
 
 # help/ja command shows all commands in Japanese
@@ -108,4 +117,5 @@ help/ja:
 	@echo "  lint            コードをリントします"
 	@echo "  typecheck       コードを型チェックします"
 	@echo "  ci              すべてのCIチェックを実行します"
+	@echo "  build           アプリケーションをビルドします"
 	@echo "  help            このヘルプメッセージを表示します"
