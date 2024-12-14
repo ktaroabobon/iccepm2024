@@ -14,12 +14,12 @@ import {
   VStack,
 } from "@chakra-ui/react";
 
-interface UpdateInfoByTabInterface {
+interface UpdateInfoByTab {
   tab: string;
   updateInfo: string;
 }
 
-const UpdateInfoByTab: UpdateInfoByTabInterface[] = [
+const UpdateInfoByTab: UpdateInfoByTab[] = [
   {
     tab: "ABOUT",
     updateInfo:
