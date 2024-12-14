@@ -7,7 +7,7 @@ This is the repository for the website of the **2024 International Conference on
 ## Docs
 
 - [English](README.md)
-- [日本語](READEM.ja.md)
+- [日本語](README.ja.md)
 
 ## Table of Contents
 
@@ -99,7 +99,3 @@ For any inquiries or support, please contact:
 
 - **Project Owner**: [ktaroabobon](https://github.com/ktaroabobon)
 - **Conference Website**: [https://iccepm2024.com/](https://iccepm2024.com/)
-
-```
-
-```
