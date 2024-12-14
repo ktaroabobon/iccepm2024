@@ -99,7 +99,3 @@ For any inquiries or support, please contact:
 
 - **Project Owner**: [ktaroabobon](https://github.com/ktaroabobon)
 - **Conference Website**: [https://iccepm2024.com/](https://iccepm2024.com/)
-
-```
-
-```
