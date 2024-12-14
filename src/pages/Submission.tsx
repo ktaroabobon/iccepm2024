@@ -102,7 +102,7 @@ export const Submission: React.FC = () => {
 
           <Stack maxWidth={"768px"} width={"100%"} height={"100%"}>
             <VStack divider={<br />}>
-              {/* <Optional1DeadLineAlert /> */}
+              <Optional1DeadLineAlert />
               <Text fontSize="md">
                 To encourage participation from both academics and industry
                 practitioners, the prospective presenters/participants have two

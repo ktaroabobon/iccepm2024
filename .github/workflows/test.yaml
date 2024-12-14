@@ -21,13 +21,13 @@ jobs:
           cache-dependency-path: "yarn.lock"
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Format, not write
-        run: make fmt
+        run: make install
 
       - name: Lint
         run: make lint
 
       - name: Type check
         run: make typecheck
+
+      - name: Format, not write
+        run: make fmt
