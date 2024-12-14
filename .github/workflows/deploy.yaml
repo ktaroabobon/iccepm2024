@@ -25,7 +25,7 @@ jobs:
       - name: Build
         run: make build
 
-      - name: Dist
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
@@ -41,6 +41,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v4
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
