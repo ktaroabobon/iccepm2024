@@ -72,6 +72,14 @@ ci:
 	@echo "type check\n------------------"
 	$(MAKE) typecheck
 
+.PHONY: install
+install:
+ifdef CI
+	yarn install
+else
+	$(DOCKER_COMPOSE_IMPL) exec app yarn install
+endif
+
 .PHONY: build
 build:
 ifdef CI
