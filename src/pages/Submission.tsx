@@ -2,10 +2,6 @@ import React from "react";
 import { Base } from "./Base";
 import ContentHeader from "../components/ContentHeader";
 import {
-  Alert,
-  AlertDescription,
-  AlertIcon,
-  AlertTitle,
   Box,
   Button,
   Card,
@@ -77,21 +73,29 @@ const OPTION2EVENTS: Event[] = [
   },
 ];
 
-const Optional1DeadLineAlert = () => {
-  return (
-    <Alert status="info" maxWidth={"768px"} width={"100%"}>
-      <AlertIcon />
-      <Box>
-        <AlertTitle>Submission Deadlines Extended!</AlertTitle>
-        <AlertDescription>
-          The submission deadlines for Full Papers (Option1) and Abstracts
-          (Option2) have been extended to March 15, 2024. Please make a note of
-          the new deadline.
-        </AlertDescription>
-      </Box>
-    </Alert>
-  );
-};
+// Optional1DeadLineAlert はコメントアウトしています
+// このコンポーネントは、締め切りが延長されたことを通知するためのものです
+// 参考のためにコメントアウトして残しています
+//
+// Optional1DeadLineAlert is commented out
+// This component is used to notify that the deadline has been extended
+// It is left commented out for reference
+//
+// const Optional1DeadLineAlert = () => {
+//   return (
+//     <Alert status="info" maxWidth={"768px"} width={"100%"}>
+//       <AlertIcon />
+//       <Box>
+//         <AlertTitle>Submission Deadlines Extended!</AlertTitle>
+//         <AlertDescription>
+//           The submission deadlines for Full Papers (Option1) and Abstracts
+//           (Option2) have been extended to March 15, 2024. Please make a note of
+//           the new deadline.
+//         </AlertDescription>
+//       </Box>
+//     </Alert>
+//   );
+// };
 
 export const Submission: React.FC = () => {
   return (
