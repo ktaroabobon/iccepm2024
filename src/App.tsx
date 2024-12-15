@@ -14,7 +14,10 @@ function App() {
   return (
     <ChakraProvider>
       <Box>
-        <BrowserRouter>
+        <BrowserRouter
+          // GitHub Pages deployment
+          basename="/iccepm2024"
+        >
           <Routes>
             <Route path={"/"} element={<Home />} />
             <Route path={"/about"} element={<About />} />
