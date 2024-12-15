@@ -2,7 +2,7 @@
 
 This is the repository for the website of the **2024 International Conference on Civil Engineering and Project Management (ICCEPM2024)**.
 
-- **[Home Page](https://iccepm2024.com/)**
+- **[Home Page](https://ktarabobon.github.io/iccepm2024/)**
 
 ## Docs
 
@@ -65,7 +65,7 @@ This command will install all necessary dependencies and set up the development 
 After setting up, you can run the website locally. Open your web browser and navigate to:
 
 ```
-http://localhost:3000
+http://localhost:3000/iccepm2024/
 ```
 
 You should see the ICCEPM2024 website running locally on your machine.
@@ -98,4 +98,4 @@ This project is licensed under the [MIT License](LICENSE).
 For any inquiries or support, please contact:
 
 - **Project Owner**: [ktaroabobon](https://github.com/ktaroabobon)
-- **Conference Website**: [https://iccepm2024.com/](https://iccepm2024.com/)
+- **Conference Website**: [https://ktarabobon.github.io/iccepm2024/](https://ktarabobon.github.io/iccepm2024/)

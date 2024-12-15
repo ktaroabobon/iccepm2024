@@ -2,7 +2,7 @@
 
 これは **ICCEPM2024** のウェブサイトのリポジトリです。
 
-- **[ホームページ](https://iccepm2024.com/)**
+- **[ホームページ](https://ktarabobon.github.io/iccepm2024/)**
 
 ## ドキュメント
 
@@ -65,7 +65,7 @@ make up
 セットアップ後、ウェブサイトをローカルで実行できます。ウェブブラウザを開き、以下の URL にアクセスしてください：
 
 ```
-http://localhost:3000
+http://localhost:3000/iccepm2024/
 ```
 
 ローカルマシンで ICCEPM2024 のウェブサイトが実行されているのが確認できます。
@@ -98,4 +98,4 @@ make help
 ご質問やサポートが必要な場合は、以下までご連絡ください：
 
 - **プロジェクトオーナー**: [Keitaro Watanabe](mailto:ktaroabobon@gmail.com)
-- **会議ウェブサイト**: [https://iccepm2024.com/](https://iccepm2024.com/)
+- **会議ウェブサイト**: [https://ktarabobon.github.io/iccepm2024/](https://ktarabobon.github.io/iccepm2024/)

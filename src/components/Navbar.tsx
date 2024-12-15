@@ -1,4 +1,5 @@
 import React from "react";
+import { Link as ReactRouterLink } from "react-router-dom";
 import {
   Box,
   Drawer,
@@ -10,7 +11,7 @@ import {
   Flex,
   HStack,
   IconButton,
-  Link,
+  Link as ChakraLink,
   useColorModeValue,
   useDisclosure,
   VStack,
@@ -59,7 +60,7 @@ const NavMainLink = ({
   mainLinkProps: NavMainLinkProps;
 }) => {
   return (
-    <Link
+    <ChakraLink
       px={2}
       py={1}
       rounded={"xl"}
@@ -67,13 +68,16 @@ const NavMainLink = ({
         textDecoration: "none",
         bg: useColorModeValue("blue.200", "blue.700"),
       }}
-      href={mainLinkProps.href}
+      // href={mainLinkProps.href}
+      // GitHub Pages deployment
+      as={ReactRouterLink}
+      to={mainLinkProps.href}
       size={"xl"}
       w={"100%"}
       textAlign={"center"}
     >
       {mainLinkProps.name}
-    </Link>
+    </ChakraLink>
   );
 };
 
@@ -85,14 +89,17 @@ export const MyNavbar: React.FC = () => {
     <>
       <Box bg={"#FCFCFC"} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <Link
-            href={"/"}
+          <ChakraLink
+            // href={"/"}
+            // GitHub Pages deployment
+            as={ReactRouterLink}
+            to={"/"}
             fontWeight={"bold"}
             fontSize={"lg"}
             _hover={{ textDecoration: "none" }}
           >
             ICCEPM 2024
-          </Link>
+          </ChakraLink>
           <HStack spacing={8} alignItems={"center"}>
             <HStack
               as={"nav"}
